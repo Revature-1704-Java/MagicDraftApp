@@ -59,7 +59,7 @@
               <arguments>build</arguments>
             </configuration>
           </execution>
-          <execution>
+          <!-- <execution>
             <id>yarn test</id>
             <goals>
               <goal>yarn</goal>
@@ -69,7 +69,7 @@
               <arguments>test --watch false</arguments>
               <failOnError>false</failOnError>
             </configuration>
-          </execution>
+          </execution> -->
         </executions>
       </plugin>
     </plugins>
