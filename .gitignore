@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -201,46 +200,46 @@ nbdist/
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+Angular/dist
+Angular/tmp
+Angular/out-tsc
 
 # dependencies
-/node_modules
+Angular/node_modules
 
 # IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+Angular/.idea
+Angular/.project
+Angular/.classpath
+Angular/.c9/
+Angular/*.launch
+Angular/.settings/
+Angular/*.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history
+Angular/.vscode/*
+Angular/!.vscode/settings.json
+Angular/!.vscode/tasks.json
+Angular/!.vscode/launch.json
+Angular/!.vscode/extensions.json
+Angular/.history
 
 # End of https://www.gitignore.io/api/java,maven,eclipse,netbeans,intellij,visualstudiocode
 =======
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-testem.log
-/typings
+Angular/.sass-cache
+Angular/connect.lock
+Angular/coverage
+Angular/libpeerconnection.log
+Angular/npm-debug.log
+Angular/testem.log
+Angular/typings
 
 # e2e
-/e2e/*.js
-/e2e/*.map
+Angular/e2e/*.js
+Angular/e2e/*.map
 
 # System Files
-.DS_Store
-Thumbs.db
+Angular/.DS_Store
+Angular/Thumbs.db
