@@ -26,6 +26,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+		    <groupId>com.teamCube</groupId>
+		    <artifactId>frontend</artifactId>
+		    <version>${project.parent.version}</version>
+		</dependency>
     </dependencies>
  
     <build>
