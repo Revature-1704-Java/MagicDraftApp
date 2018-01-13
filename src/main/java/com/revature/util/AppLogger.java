@@ -17,7 +17,7 @@ public class AppLogger {
 	@Before("execution(* com.revature.controller.UserValidation.postLogin(..))")
 	public void logginIn(JoinPoint jp) {
 		Object[] args = jp.getArgs();
-		logger.info((String)args[0] + " attemping to login.");
+		logger.info(args[0] + " attemping to login.");
 	}
 	
 }
