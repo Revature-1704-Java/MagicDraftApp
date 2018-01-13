@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "mtgdraft-app"
+    "name": "mtgcube-draft"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "../src/main/resources/static",
+      "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"
