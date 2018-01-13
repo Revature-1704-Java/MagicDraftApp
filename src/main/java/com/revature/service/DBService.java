@@ -16,7 +16,7 @@ public class DBService {
 		return userDao.save(newUser);
 	}
 	
-	public User findByIdAndPass(String email, String password) {
+	public User findByEmailAndPass(String email, String password) {
 		return userDao.findByEmailAndPassword(email, password);
 	}
 	

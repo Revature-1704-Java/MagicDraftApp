@@ -28,7 +28,7 @@ public class UserValidation {
 			return null;
 		}
 		
-		return dbService.findByIdAndPass(user.getEmail(), user.getPassword());
+		return dbService.findByEmailAndPass(user.getEmail(), user.getPassword());
 	}
 	
 	@RequestMapping(value="/signup", method=RequestMethod.POST)
