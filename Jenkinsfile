@@ -12,6 +12,6 @@ node {
         sh 'mvn clean install'
     }
     stage('Deploy') {
-      sh 'mvn tomcat7:redeploy'
+      sh 'mvn tomcat7:redeploy -Dmaven.tomcat.path=/MTGDraftApp'
     }
 }
