@@ -4,8 +4,8 @@ node {
         git 'https://github.com/Revature-1704-Java/MagicDraftApp.git'
     }
     stage('Build/Test Frontend') {
-        sh 'npm install --prefix Angular'
-        sh 'npm run-script build --prefix Angular'
+        sh 'npm install --prefix frontend'
+        sh 'npm run-script build --prefix frontend'
 
     }
     stage('Build/Test Backend') {
