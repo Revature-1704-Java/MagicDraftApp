@@ -1,6 +1,7 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
+**/node_modules
 ### STS ###
 .apt_generated
 .classpath
@@ -78,10 +79,10 @@ local.properties
 .worksheet
 
 ### Eclipse Patch ###
-# Eclipse Core		
+# Eclipse Core
 .project
 
-# JDT-specific (Eclipse Java Development Tools)		
+# JDT-specific (Eclipse Java Development Tools)
 .classpath
 
 ### Intellij ###
@@ -196,50 +197,3 @@ nbdist/
 .nb-gradle/
 
 ### VisualStudioCode ###
-=======
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-Angular/dist
-Angular/tmp
-Angular/out-tsc
-
-# dependencies
-Angular/node_modules
-
-# IDEs and editors
-Angular/.idea
-Angular/.project
-Angular/.classpath
-Angular/.c9/
-Angular/*.launch
-Angular/.settings/
-Angular/*.sublime-workspace
-
-# IDE - VSCode
-Angular/.vscode/*
-Angular/!.vscode/settings.json
-Angular/!.vscode/tasks.json
-Angular/!.vscode/launch.json
-Angular/!.vscode/extensions.json
-Angular/.history
-
-# End of https://www.gitignore.io/api/java,maven,eclipse,netbeans,intellij,visualstudiocode
-=======
-
-# misc
-Angular/.sass-cache
-Angular/connect.lock
-Angular/coverage
-Angular/libpeerconnection.log
-Angular/npm-debug.log
-Angular/testem.log
-Angular/typings
-
-# e2e
-Angular/e2e/*.js
-Angular/e2e/*.map
-
-# System Files
-Angular/.DS_Store
-Angular/Thumbs.db
