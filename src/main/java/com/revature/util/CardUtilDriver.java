@@ -1,5 +1,10 @@
+package com.revature.util;
+
 import java.util.ArrayList;
 import java.util.Map.Entry;
+
+import com.revature.model.bean.CardPool;
+import com.revature.model.bean.DraftValuePool;
 
 /*Driver class that shows how to use the utilities*/
 public class CardUtilDriver {

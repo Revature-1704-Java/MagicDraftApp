@@ -1,3 +1,5 @@
+package com.revature.model.bean;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
