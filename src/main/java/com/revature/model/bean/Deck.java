@@ -15,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="Decks")
@@ -32,6 +33,7 @@ public class Deck implements Serializable {
 	@JoinColumn(name="USER_DECK")
 	private User owner;
 	
+	@NotNull
 	@ElementCollection
 	private List<String> cards;
 

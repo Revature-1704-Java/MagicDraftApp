@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.model.bean.User;
 import com.revature.service.DBService;
-import com.revature.service.PackGenerator;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
