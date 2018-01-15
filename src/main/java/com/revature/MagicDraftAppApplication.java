@@ -1,12 +1,12 @@
-package com.teamCube.app;
+package com.revature;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MtgCubeDraftApplication {
+public class MagicDraftAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MtgCubeDraftApplication.class, args);
+		SpringApplication.run(MagicDraftAppApplication.class, args);
 	}
 }
