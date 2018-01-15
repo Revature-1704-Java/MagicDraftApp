@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Users\manz1\OneDrive\Documents\GitHub\MagicDraftApp\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

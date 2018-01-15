@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-draft-interface',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
