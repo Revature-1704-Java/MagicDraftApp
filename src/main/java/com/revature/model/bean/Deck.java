@@ -17,8 +17,14 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name="Decks")
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Deck implements Serializable {
 
 	@Id
@@ -31,6 +37,7 @@ public class Deck implements Serializable {
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="USER_DECK")
+	@JsonBackReference
 	private User owner;
 	
 	@NotNull

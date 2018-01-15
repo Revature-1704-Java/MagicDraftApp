@@ -36,7 +36,7 @@ public class UserValidation {
 			return null;
 		}
 		
-		User loggedInUser = dbService.findByEmailAndPass(user.getEmail(), user.getPassword());
+		User loggedInUser = dbService.userFindByEmailAndPass(user.getEmail(), user.getPassword());
 		//Generate token
 		String token = Jwts.builder().setSubject(loggedInUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
 		responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);

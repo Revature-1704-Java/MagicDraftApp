@@ -32,7 +32,7 @@ public class DeckController {
 	
 	@Autowired
 	DBService dbService;
-
+	
 	@Value("${key}")
 	private String key;
 	
@@ -65,7 +65,7 @@ public class DeckController {
 		@SuppressWarnings("unchecked")
 		List<String> cards = mapper.readValue(json, List.class);
 		
-		user = dbService.findByEmail(userEmail);
+		user = dbService.userFindByEmail(userEmail);
 		
 		Deck newDeck = new Deck();
 		newDeck.setCreationTime(new Date());
@@ -74,6 +74,29 @@ public class DeckController {
 		
 		Deck deck = dbService.createDeck(newDeck);
 		return new ResponseEntity<String>(HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="view/deck/{id}", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Deck> getDeck(@RequestHeader("Authorization") String auth, @PathVariable("id") int id, Deck deck) {
+		
+		if(auth.length() < 7) {
+			return new ResponseEntity<Deck>(HttpStatus.UNAUTHORIZED);
+		}
+	
+		
+		String token = auth.substring(7);
+		User user;
+		String userEmail = null;
+		try {
+			userEmail = Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody().getSubject();
+		}catch(Exception e) {
+			return new ResponseEntity<Deck>(HttpStatus.UNAUTHORIZED);
+		}
+		
+		user = dbService.userFindByEmail(userEmail);
+		deck = dbService.deckFindByIdAndOwner(id, user);
+		return new ResponseEntity<Deck>(deck, HttpStatus.OK);
+		
 	}
 	
 }
