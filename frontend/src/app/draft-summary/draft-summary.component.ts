@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-draft-summary',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DraftSummaryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

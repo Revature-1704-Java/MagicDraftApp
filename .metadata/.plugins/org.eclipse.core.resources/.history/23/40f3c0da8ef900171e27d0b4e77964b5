@@ -1,0 +1,8 @@
+<a href='draft'>
+  <button id="startDraft" class="btn btn-large">Start Draft</button>
+</a>
+<div class="row">
+	<div *ngFor="let card of cards" class="col-sm-4 col-lg-4 col-md-4">
+		<app-card [Card]="card"></app-card>
+	</div>
+</div>

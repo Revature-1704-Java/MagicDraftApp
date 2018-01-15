@@ -11,8 +11,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
   ngAfterViewInit() {
       document.getElementById('login').addEventListener('click', this.validateLogin);

@@ -1,0 +1,25 @@
+import { Component, OnInit } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+ import {NgForm} from '@angular/forms';
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  constructor(private modalService: NgbModal) {}
+ngOnInit() {}
+    open(content) {
+      this.modalService.open(content).result.then((result) => {
+         console.log('closed');
+      }, (reason) => {
+         console.log('dismissed' );
+      });
+   }
+
+  onSubmit(addMountForm: NgForm) {
+    console.log('adding form values ');
+    console.log(this.addMountForm.value);
+}
+}

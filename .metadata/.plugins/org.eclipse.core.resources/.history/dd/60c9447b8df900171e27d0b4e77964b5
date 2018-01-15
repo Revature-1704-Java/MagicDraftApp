@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { Card } from '../shared/card';
+import { ApiAccessService } from '../shared/api-access.service';
+
+@Component({
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
+})
+export class HomePageComponent implements OnInit {
+
+  products: Card[] = [];
+  constructor( private productService: ApiAccessService ) { }
+
+  ngOnInit() {
+    this.products = this.productService.getProducts();
+  }
+
+}
+
