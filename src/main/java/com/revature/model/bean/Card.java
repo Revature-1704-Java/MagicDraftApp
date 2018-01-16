@@ -22,7 +22,7 @@ public class Card {
 	@SequenceGenerator(allocationSize=1, name="card_id_seq", sequenceName="card_id_seq")
 	private Integer id;
 	
-	@Column(name="NAME")
+	@Column(name="NAME", unique=true)
 	private String name;
 	@Column(name="DRAFTVALUE")
 	private Double draftValue;

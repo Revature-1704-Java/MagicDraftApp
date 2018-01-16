@@ -81,7 +81,7 @@ public class DeckController {
 		return new ResponseEntity<String>(HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="view/deck/{id}", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="view/deck/{id}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Deck> getDeck(@PathVariable("id") int id, Deck deck) {
 		
 		deck = dbService.deckFindById(id);
