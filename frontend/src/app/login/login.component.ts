@@ -18,10 +18,14 @@ export class LoginComponent implements OnInit {
   private processLogin() {
     console.log(this.http);
     console.log(this.currentUser);
-    //
-    this.http.post('http://18.216.223.139:8090/login', this.currentUser).subscribe(res => {
-      console.log(res);
-    });
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://18.216.223.139:8090/login')
+    xhr.send(this.currentUser);
+
+    // this.http.post('http://18.216.223.139:8090/login', {"email":this.currentUser.email, "password":this.currentUser.password}).subscribe(res => {
+    //   console.log(res);
+    // });
   }
 
 }
