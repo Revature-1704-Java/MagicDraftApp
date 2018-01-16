@@ -18,9 +18,9 @@ export class DraftInterfaceComponent implements OnInit {
         let json = xhttp.responseText;
         // document.getElementById("demo").innerHTML = json;
         let obj = JSON.parse(json);
-        for(var i =0; i < obj.length; i++){
-          var temp = obj[i];
-          for(var j =0; j < obj[i].length; j++){
+        for(let i =0; i < obj.length; i++){
+          let temp = obj[i];
+          for(let j =0; j < obj[i].length; j++){
             console.log(temp[j].name);
             let imgurl = "<img src=\"" + grabImage(temp[j].name) + "\">";
             console.log(imgurl);
@@ -31,22 +31,23 @@ export class DraftInterfaceComponent implements OnInit {
     };
     xhttp.send();
   }
-  function grabImage(cardName:string){
-    let xhttp = new XMLHttpRequest();
-    let url = "https://api.magicthegathering.io/v1/cards?name=" + cardName;
-    let answer = "";
+}
 
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        let json = this.responseText;
-        let obj = JSON.parse(json);
-        let image = obj.cards;
-        answer = image[0].imageUrl;
-        console.log(answer);
-        return answer;
-      }
-    };
-    xhttp.open("GET", url, true);
-    xhttp.send();
-  }
+function grabImage(cardName:string){
+  let xhttp = new XMLHttpRequest();
+  let url = "https://api.magicthegathering.io/v1/cards?name=" + cardName;
+  let answer = "";
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let json = this.responseText;
+      let obj = JSON.parse(json);
+      let image = obj.cards;
+      answer = image[0].imageUrl;
+      console.log(answer);
+      return answer;
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
 }
