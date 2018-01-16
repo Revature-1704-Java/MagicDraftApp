@@ -1,8 +1,8 @@
 package com.revature.service;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -21,8 +21,8 @@ public class PackGenerator {
 		String line = null;
 		Card card;
 		ClassPathResource classPathResource = new ClassPathResource(cardsFilePath);
-		FileReader fileReader = new FileReader(classPathResource.getFile());
-		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		InputStreamReader inputStreamReader = new InputStreamReader(classPathResource.getInputStream());
+		BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 		while((line = bufferedReader.readLine()) != null) {
 			//Regular expression that breaks up line of text between name and its value
 			String[] draftPair = line.split(" \\WDraft Number\\W");
@@ -30,7 +30,7 @@ public class PackGenerator {
 			cardPool.add(card);
 		}
 		bufferedReader.close();
-		fileReader.close();
+		inputStreamReader.close();
 		this.cardPool = cardPool;
 	}
 	

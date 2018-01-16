@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import com.revature.service.DBService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+@CrossOrigin
 @RestController
 public class UserValidation {
 	
@@ -28,7 +30,7 @@ public class UserValidation {
 	private String key;
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public ResponseEntity<String> postLogin(@Valid User user, BindingResult bindingResult) {
+	public ResponseEntity<User> postLogin(@Valid User user, BindingResult bindingResult) {
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
 		
@@ -37,11 +39,16 @@ public class UserValidation {
 		}
 		
 		User loggedInUser = dbService.findByEmailAndPass(user.getEmail(), user.getPassword());
-		//Generate token
-		String token = Jwts.builder().setSubject(loggedInUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
-		responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);
+		if(loggedInUser == null) {
+			return null;
+		}else {
+			//Generate token
+			String token = Jwts.builder().setSubject(loggedInUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
+			responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);
+			loggedInUser.setPassword("");
+			return new ResponseEntity<User>(loggedInUser, responseHeaders, HttpStatus.OK);
+		}
 		
-		return new ResponseEntity<String>("Success", responseHeaders, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/logout", method=RequestMethod.POST)

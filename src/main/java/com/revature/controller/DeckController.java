@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -27,6 +28,7 @@ import com.revature.service.PackGenerator;
 
 import io.jsonwebtoken.Jwts;
 
+@CrossOrigin
 @RestController
 public class DeckController {
 	
@@ -70,7 +72,7 @@ public class DeckController {
 		Deck newDeck = new Deck();
 		newDeck.setCreationTime(new Date());
 		newDeck.setOwner(user);
-		newDeck.setCards(cards);
+		//newDeck.setCards(cards);
 		
 		Deck deck = dbService.createDeck(newDeck);
 		return new ResponseEntity<String>(HttpStatus.OK);
