@@ -8,15 +8,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  private currentEmail : string;
-  private currentPwd : string;
+  public currentEmail : string;
+  public currentPwd : string;
 
   constructor(private http:HttpClient) {}
   ngOnInit() {
 
   }
 
-  private processLogin() {
+  public processLogin() {
 
     let myForm = new FormData();
     myForm.append('email', this.currentEmail);
