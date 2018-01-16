@@ -1,4 +1,4 @@
-<form (ngSubmit)='processLogin()' #loginForm='ngForm'>
+<form (ngSubmit)='processLogin()' id='loginForm' name='loginForm' #loginForm='ngForm'>
   <input type='text' [(ngModel)]='currentUser.email' name='email' id='email'/> {{currentUser.email}}
   <input type='password' [(ngModel)]='currentUser.password' name='password' id='password'/> {{currentUser.password}}
   <button type='submit' value='submit'>Login</button>
