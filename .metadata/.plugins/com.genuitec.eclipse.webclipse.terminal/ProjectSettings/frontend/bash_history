@@ -1,0 +1,9 @@
+npm install
+npm install bootstrap@3 jquery --save
+npm install --save @ng-bootstrap/ng-bootstrap
+npm install bootstrap@4.0.0-alpha.6
+ng g c card
+ng g c card-detail
+ng g c modal
+npm install ng2-bootstrap-modal
+ng g c search
