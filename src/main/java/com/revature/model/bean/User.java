@@ -15,6 +15,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name="Users")
 public class User implements Serializable {
@@ -33,6 +35,7 @@ public class User implements Serializable {
 	private String password;
 	
 	@OneToMany(mappedBy="owner", fetch=FetchType.LAZY, cascade={CascadeType.PERSIST})
+	@JsonManagedReference
 	private List<Deck> decks;
 
 	public Integer getId() {

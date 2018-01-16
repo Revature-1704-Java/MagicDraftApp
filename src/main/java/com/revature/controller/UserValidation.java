@@ -38,7 +38,7 @@ public class UserValidation {
 			return null;
 		}
 		
-		User loggedInUser = dbService.findByEmailAndPass(user.getEmail(), user.getPassword());
+		User loggedInUser = dbService.userFindByEmailAndPass(user.getEmail(), user.getPassword());
 		if(loggedInUser == null) {
 			return null;
 		}else {

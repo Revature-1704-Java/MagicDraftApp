@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -13,12 +14,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name="Decks")
+@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Deck implements Serializable {
 
 	@Id
@@ -31,11 +40,12 @@ public class Deck implements Serializable {
 	
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="USER_DECK")
+	@JsonBackReference
 	private User owner;
 	
 	@NotNull
 	@ElementCollection
-	private List<String> cards;
+	private List<Card> cards;
 
 	public Integer getId() {
 		return id;
@@ -61,15 +71,15 @@ public class Deck implements Serializable {
 		this.owner = owner;
 	}
 
-	public List<String> getCards() {
+	public List<Card> getCards() {
 		return cards;
 	}
 
-	public void setCards(List<String> cards) {
+	public void setCards(List<Card> cards) {
 		this.cards = cards;
 	}
 
-	public Deck(Integer id, Date creationTime, User owner, List<String> cards) {
+	public Deck(Integer id, Date creationTime, User owner, List<Card> cards) {
 		super();
 		this.id = id;
 		this.creationTime = creationTime;

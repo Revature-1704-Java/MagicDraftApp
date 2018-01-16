@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class DeckController {
 	
 	@Autowired
 	DBService dbService;
-
+	
 	@Value("${key}")
 	private String key;
 	
@@ -65,9 +66,13 @@ public class DeckController {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		@SuppressWarnings("unchecked")
-		List<String> cards = mapper.readValue(json, List.class);
+		List<String> cardNames = mapper.readValue(json, List.class);
+		List<Card> cards = new ArrayList<Card>();
+		for(int i = 0; i < cardNames.size(); i++) {
+			cards.add(dbService.cardFindByName(cardNames.get(i)));
+		}
 		
-		user = dbService.findByEmail(userEmail);
+		user = dbService.userFindByEmail(userEmail);
 		
 		Deck newDeck = new Deck();
 		newDeck.setCreationTime(new Date());
@@ -76,6 +81,14 @@ public class DeckController {
 		
 		Deck deck = dbService.createDeck(newDeck);
 		return new ResponseEntity<String>(HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="view/deck/{id}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Deck> getDeck(@PathVariable("id") int id, Deck deck) {
+		
+		deck = dbService.deckFindById(id);
+		return new ResponseEntity<Deck>(deck, HttpStatus.OK);
+		
 	}
 	
 }

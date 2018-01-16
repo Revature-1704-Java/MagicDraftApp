@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.stereotype.Component;
 
 import com.revature.model.bean.Card;
 
@@ -15,7 +16,7 @@ public class PackGenerator {
 	
 	private List<Card> cardPool;
 
-	public PackGenerator(String cardsFilePath) throws IOException {
+	public PackGenerator(String cardsFilePath, DBService dbService) throws IOException {
 		super();
 		List<Card> cardPool = new ArrayList<Card>();
 		String line = null;
@@ -26,7 +27,7 @@ public class PackGenerator {
 		while((line = bufferedReader.readLine()) != null) {
 			//Regular expression that breaks up line of text between name and its value
 			String[] draftPair = line.split(" \\WDraft Number\\W");
-			card = new Card(draftPair[0], Double.parseDouble(draftPair[1]));
+			card = dbService.createCard(new Card(draftPair[0], Double.parseDouble(draftPair[1])));
 			cardPool.add(card);
 		}
 		bufferedReader.close();
