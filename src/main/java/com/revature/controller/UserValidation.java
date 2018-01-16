@@ -28,7 +28,7 @@ public class UserValidation {
 	private String key;
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public ResponseEntity<String> postLogin(@Valid User user, BindingResult bindingResult) {
+	public ResponseEntity<User> postLogin(@Valid User user, BindingResult bindingResult) {
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
 		
@@ -37,11 +37,16 @@ public class UserValidation {
 		}
 		
 		User loggedInUser = dbService.findByEmailAndPass(user.getEmail(), user.getPassword());
-		//Generate token
-		String token = Jwts.builder().setSubject(loggedInUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
-		responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);
+		if(loggedInUser == null) {
+			return null;
+		}else {
+			//Generate token
+			String token = Jwts.builder().setSubject(loggedInUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
+			responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);
+			loggedInUser.setPassword("");
+			return new ResponseEntity<User>(loggedInUser, responseHeaders, HttpStatus.OK);
+		}
 		
-		return new ResponseEntity<String>("Success", responseHeaders, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/logout", method=RequestMethod.POST)
