@@ -77,24 +77,9 @@ public class DeckController {
 	}
 	
 	@RequestMapping(value="view/deck/{id}", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Deck> getDeck(@RequestHeader("Authorization") String auth, @PathVariable("id") int id, Deck deck) {
+	public ResponseEntity<Deck> getDeck(@PathVariable("id") int id, Deck deck) {
 		
-		if(auth.length() < 7) {
-			return new ResponseEntity<Deck>(HttpStatus.UNAUTHORIZED);
-		}
-	
-		
-		String token = auth.substring(7);
-		User user;
-		String userEmail = null;
-		try {
-			userEmail = Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody().getSubject();
-		}catch(Exception e) {
-			return new ResponseEntity<Deck>(HttpStatus.UNAUTHORIZED);
-		}
-		
-		user = dbService.userFindByEmail(userEmail);
-		deck = dbService.deckFindByIdAndOwner(id, user);
+		deck = dbService.deckFindById(id);
 		return new ResponseEntity<Deck>(deck, HttpStatus.OK);
 		
 	}

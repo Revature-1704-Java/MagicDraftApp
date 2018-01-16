@@ -10,5 +10,7 @@ import com.revature.model.bean.User;
 public interface DeckDao extends JpaRepository<Deck, Integer> {
 	
 	Deck findByIdAndOwner(Integer id, User owner);
+	
+	Deck findById(Integer id);
 
 }

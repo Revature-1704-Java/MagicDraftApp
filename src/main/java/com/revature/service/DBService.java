@@ -37,4 +37,8 @@ public class DBService {
 		return deckDao.findByIdAndOwner(id, owner);
 	}
 	
+	public Deck deckFindById (Integer id){
+		return deckDao.findById(id);
+	}
+	
 }
