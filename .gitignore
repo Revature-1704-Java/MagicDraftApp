@@ -78,10 +78,10 @@ local.properties
 .worksheet
 
 ### Eclipse Patch ###
-# Eclipse Core		
+# Eclipse Core
 .project
 
-# JDT-specific (Eclipse Java Development Tools)		
+# JDT-specific (Eclipse Java Development Tools)
 .classpath
 
 ### Intellij ###
@@ -205,7 +205,7 @@ Angular/tmp
 Angular/out-tsc
 
 # dependencies
-Angular/node_modules
+**/node_modules
 
 # IDEs and editors
 Angular/.idea
