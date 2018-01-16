@@ -1,6 +1,7 @@
 package com.revature.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -63,7 +64,11 @@ public class DeckController {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		@SuppressWarnings("unchecked")
-		List<String> cards = mapper.readValue(json, List.class);
+		List<String> cardNames = mapper.readValue(json, List.class);
+		List<Card> cards = new ArrayList<Card>();
+		for(int i = 0; i < cardNames.size(); i++) {
+			cards.add(dbService.cardFindByName(cardNames.get(i)));
+		}
 		
 		user = dbService.userFindByEmail(userEmail);
 		

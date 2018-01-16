@@ -3,8 +3,10 @@ package com.revature.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.revature.model.CardDao;
 import com.revature.model.DeckDao;
 import com.revature.model.UserDao;
+import com.revature.model.bean.Card;
 import com.revature.model.bean.Deck;
 import com.revature.model.bean.User;
 
@@ -16,6 +18,9 @@ public class DBService {
 	
 	@Autowired
 	private DeckDao deckDao;
+	
+	@Autowired
+	private CardDao cardDao;
 	
 	public User createUser(User newUser) {
 		return userDao.save(newUser);
@@ -41,4 +46,11 @@ public class DBService {
 		return deckDao.findById(id);
 	}
 	
+	public Card createCard(Card newCard) {
+		return cardDao.save(newCard);
+	}
+	
+	public Card cardFindByName(String name) {
+		return cardDao.findByName(name);
+	}
 }
