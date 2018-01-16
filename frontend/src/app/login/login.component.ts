@@ -8,12 +8,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
+  private currentEmail : string;
+  private currentPwd : string;
+
   constructor(private http:HttpClient) {}
   ngOnInit() {
 
   }
 
-  processLogin() {
+  private processLogin() {
 
+    let myForm = new FormData();
+    myForm.append('email', this.currentEmail);
+    myForm.append('password', this.currentPwd);
+
+    this.http.post('http://18.216.223.139:8090/login', myForm).subscribe(res => {
+      console.log(res);
+    });
   }
 }
