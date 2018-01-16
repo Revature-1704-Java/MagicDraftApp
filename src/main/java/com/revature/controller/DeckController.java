@@ -72,7 +72,7 @@ public class DeckController {
 		Deck newDeck = new Deck();
 		newDeck.setCreationTime(new Date());
 		newDeck.setOwner(user);
-		newDeck.setCards(cards);
+		//newDeck.setCards(cards);
 		
 		Deck deck = dbService.createDeck(newDeck);
 		return new ResponseEntity<String>(HttpStatus.OK);
