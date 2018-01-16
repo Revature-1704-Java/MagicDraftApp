@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;frontend/src/app/shared/product.ts&apos; to &apos;card.ts&apos;" description="Rename resource &apos;product.ts&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/app/shared/product.ts" name="card.ts" stamp="1515977033830" updateReferences="true"/>
+</session>

@@ -1,0 +1,3 @@
+<a href='draft'>
+  <button id="startDraft" class="btn btn-large">Start Draft</button>
+</a>
