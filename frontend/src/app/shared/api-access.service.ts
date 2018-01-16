@@ -12,6 +12,7 @@ export class ApiAccessService {
     return cards.find(p => p.id === cardId);
   }
 
+
 }
 
 export const cards = [
@@ -55,6 +56,35 @@ export const cards = [
     'id': 5,
     'title': 'Card5',
     'price': 4.99,
+    'rating': 'T',
+    'shortDescription': 'This is a short description',
+    'description': 'Lorem ipsum',
+    'categories': ['RPG']
+  },
+
+  // adding more cards to test newly-added scroll bar!
+  {
+    'id': 6,
+    'title': 'Card6',
+    'price': 9.99,
+    'rating': 'T',
+    'shortDescription': 'This is a short description',
+    'description': 'Lorem ipsum',
+    'categories': ['RPG']
+  },
+  {
+    'id': 7,
+    'title': 'Card7',
+    'price': 12.99,
+    'rating': 'T',
+    'shortDescription': 'This is a short description',
+    'description': 'Lorem ipsum',
+    'categories': ['RPG']
+  },
+  {
+    'id': 8,
+    'title': 'Card8',
+    'price': 14.99,
     'rating': 'T',
     'shortDescription': 'This is a short description',
     'description': 'Lorem ipsum',
