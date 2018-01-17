@@ -27,7 +27,7 @@ public class PackGenerator {
 		while((line = bufferedReader.readLine()) != null) {
 			//Regular expression that breaks up line of text between name and its value
 			String[] draftPair = line.split(" \\WDraft Number\\W");
-			card = dbService.createCard(new Card(draftPair[0], Double.parseDouble(draftPair[1])));
+			card = dbService.cardFindByName(draftPair[0]);
 			cardPool.add(card);
 		}
 		bufferedReader.close();

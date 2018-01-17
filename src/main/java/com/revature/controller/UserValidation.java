@@ -55,23 +55,29 @@ public class UserValidation {
 	public ResponseEntity<String> postLogout(){
 		HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.add("Set-Cookie", "mtg-access-token=; Max-Age=0");
-		return new ResponseEntity<String>(null, responseHeaders, HttpStatus.OK);
+		return new ResponseEntity<String>(responseHeaders, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/signup", method=RequestMethod.POST)
-	public ResponseEntity<String> postSignup(@Valid User user, BindingResult bindingResult) {
+	public ResponseEntity<User> postSignup(@Valid User user, BindingResult bindingResult) {
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
 		
 		if(bindingResult.hasErrors()) {
 			
-			return new ResponseEntity<String>("Fail", responseHeaders, HttpStatus.NO_CONTENT);
+			return null;
 		}
 		//Create the new user
-		User newUser = dbService.createUser(user);
-		String token = Jwts.builder().setSubject(newUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
-		responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);
-		return new ResponseEntity<String>(null, responseHeaders, HttpStatus.OK);
+		if(dbService.userFindByEmail(user.getEmail()) != null) {
+			return null;
+		}else {
+			User newUser = dbService.createUser(user);
+			String token = Jwts.builder().setSubject(newUser.getEmail()).signWith(SignatureAlgorithm.HS512, key).compact();
+			responseHeaders.add("Set-Cookie", "mtg-access-token=" + token);
+			newUser.setPassword("");
+			return new ResponseEntity<User>(newUser, responseHeaders, HttpStatus.OK);
+		}
+		
 		
 	}
 
