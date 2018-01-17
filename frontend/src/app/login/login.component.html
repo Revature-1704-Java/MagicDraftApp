@@ -82,6 +82,7 @@
 				<form (ngSubmit)='processRegistration()' id='registrationForm' name='registrationForm' #registrationForm='ngForm'>
 					<div class="modal-body">
 						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='regEmail' id='regEmail' placeholder='Email'/>
+				    <input type="password" class="form-control" [(ngModel)]='currentPwd' name='regPass' id='regPass' placeholder='Password'/>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
