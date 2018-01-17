@@ -24,18 +24,19 @@ public class AppLogger {
 	@AfterReturning("execution(* com.revature.controller.UserValidation.postLogout())")
 	public void logginOut(JoinPoint jp) {
 		Object[] args = jp.getArgs();
+		logger.info("Attempting to log out: " + (args.length == 0 ? true : false));
 	}
 	
 	@AfterReturning("execution(* com.revature.controller.UserValidation.postSignup(..))")
 	public void logginPostSignup(JoinPoint jp) {
 		Object[] args = jp.getArgs();
-		logger.info(args[0] + " attemping to process info after logging in.");
+		logger.info(args[0] + " attemping to process signup.");
 	}
 	
 	@AfterReturning("execution(* com.revature.controller.DeckController.saveDeck(..))")
 	public void logginSaveDeck (JoinPoint jp) {
 		Object[] args = jp.getArgs();
-		logger.info(args[0] + " attempting to save dat deck. ._.");
+		logger.info(args[0] + " attempting to save the deck");
 	}
 	
 }
