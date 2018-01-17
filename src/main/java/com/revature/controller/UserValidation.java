@@ -55,7 +55,7 @@ public class UserValidation {
 	public ResponseEntity<String> postLogout(){
 		HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.add("Set-Cookie", "mtg-access-token=; Max-Age=0");
-		return new ResponseEntity<String>(null, responseHeaders, HttpStatus.OK);
+		return new ResponseEntity<String>(responseHeaders, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/signup", method=RequestMethod.POST)
