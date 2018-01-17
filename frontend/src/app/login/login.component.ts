@@ -26,4 +26,14 @@ export class LoginComponent implements OnInit {
       console.log(res);
     });
   }
+
+  public processRegistration() {
+    let myForm = new FormData();
+    myForm.append('email', this.currentEmail);
+    myForm.append('password', this.currentPwd);
+
+    this.http.post('http://18.216.223.139:8090/signup', myForm).subscribe(res => {
+      console.log(res);
+    });
+  }
 }
