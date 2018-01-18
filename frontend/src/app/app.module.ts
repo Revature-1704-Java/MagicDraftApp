@@ -14,8 +14,10 @@ import {DraftSummaryComponent} from './draft-summary/draft-summary.component';
 import {ModalComponent} from './modal/modal.component';
 import {CardComponent} from './card/card.component';
 import {CardDetailComponent} from './card-detail/card-detail.component';
-import {ApiAccessService} from './shared/api-access.service';
 import {SearchComponent} from './search/search.component';
+
+import {ApiAccessService} from './shared/api-access.service';
+import { LoginService } from './shared/login.service';
 
 
 @NgModule({
@@ -46,7 +48,7 @@ import {SearchComponent} from './search/search.component';
       headerName: 'Authentication',
     })
   ],
-  providers: [ApiAccessService, DeckService],
+  providers: [ApiAccessService, LoginService, DeckService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
