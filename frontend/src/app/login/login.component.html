@@ -10,7 +10,7 @@
 
 <body>
 	<!-- start navbar -->
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-md" style="background-color:black">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -21,9 +21,9 @@
 				</li>
 			</ul>
 		</div>
-		<h1><a class="navbar-brand d-flex mx-auto" id="title" href="#" >
+		<a class="navbar-brand d-flex mx-auto" id="title" href="#" >
 			Magic The Gathering
-		</a></h1>
+		</a>
 		<div *ngIf='!this.login.loggedIn' class="navbar-collapse collapse dual-collapse">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
