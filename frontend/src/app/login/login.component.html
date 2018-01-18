@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Required meta tags -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
@@ -12,7 +9,6 @@
 </head>
 
 <body>
-
 	<!-- start navbar -->
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse">
@@ -20,26 +16,22 @@
 		</button>
 		<div class="navbar-collapse collapse dual-collapse">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="https://github.com/Revature-1704-Java/MagicDraftApp">Github.com</a>
+				<li id="github" class="nav-item"><a class="nav-link"
+					href="https://github.com/Revature-1704-Java/MagicDraftApp">Github</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="https://Google.com">Google</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
 			</ul>
 		</div>
-		<h1><a class="navbar-brand d-flex mx-auto" class="font-italic" href="#">
+		<h1><a class="navbar-brand d-flex mx-auto" id="title" href="#" >
 			Magic The Gathering
 		</a></h1>
 		<div *ngIf='!this.login.loggedIn' class="navbar-collapse collapse dual-collapse">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<button type='button' class='btn btn-success' data-toggle='modal'
+					<button type='button' class='btn btn-success btn-lg' data-toggle='modal'
 					data-target=#loginModal>Login</button>
 				</li>
 				<li class="nav-item">
-					<button type="button" class="btn btn-primary" data-toggle="modal"
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
 					data-target="#registerModal">Register</button>
 				</li>
 			</ul>
@@ -67,11 +59,12 @@
 				<form (ngSubmit)='doLogin()' id='loginForm' name='loginForm' #loginForm='ngForm'>
 					<div class="modal-body">
 						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='email' id='email' placeholder='Email'/>
-				    <input type="password" class="form-control" [(ngModel)]='currentPwd' name='password' id='password' placeholder='Password'/>
+						<br>
+						<input type="password" class="form-control" [(ngModel)]='currentPwd' name='password' id='password' placeholder='Password'/>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type='button' (click)='doLogin()' class="btn btn-primary" data-dismiss='modal'>Save</button>
+						<button type='button' (click)='doLogin()' class="btn btn-primary" data-dismiss='modal'>Sign In</button>
 					</div>
 				</form>
 			</div>
@@ -79,9 +72,7 @@
 	</div>
 	<!-- end sign in modal -->
 
-
 	<!-- Register Modal -->
-
 	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -91,11 +82,12 @@
 				<form id='registrationForm' name='registrationForm' #registrationForm='ngForm'>
 					<div class="modal-body">
 						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='regEmail' id='regEmail' placeholder='Email'/>
-				    <input type="password" class="form-control" [(ngModel)]='currentPwd' name='regPass' id='regPass' placeholder='Password'/>
+						<br>
+						<input type="password" class="form-control" [(ngModel)]='currentPwd' name='regPass' id='regPass' placeholder='Password'/>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" (click)='doRegister()' class="btn btn-primary" data-dismiss='modal'>Save</button>
+						<button type="button" (click)='doRegister()' class="btn btn-primary" data-dismiss='modal'>Register</button>
 					</div>
 				</form>
 			</div>

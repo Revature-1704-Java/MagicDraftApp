@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   public currentPwd : string;
 
   constructor(public login : LoginService) {}
+  
   ngOnInit() {
   }
 
