@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   }
 
   public doLogin() {
-    this.login.processLogin(this.currentEmail, this.currentPwd)
+    this.login.processLogin(this.currentEmail, this.currentPwd);
+    this.login.setMyEmail(this.currentEmail);
   }
 
   public doRegister() {

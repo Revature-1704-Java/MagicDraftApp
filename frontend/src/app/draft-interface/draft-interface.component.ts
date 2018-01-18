@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {DeckService} from '../shared/deck.service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../shared/login.service';
 declare let jquery:any;
 declare let $ :any;
 
@@ -10,7 +13,7 @@ declare let $ :any;
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor(public ds: DeckService) {}
+  constructor(public ds: DeckService, public router : Router, private http: HttpClient, public loggedInUser: LoginService) {}
 
   public draftCard(event: any) {
 
@@ -50,9 +53,10 @@ export class DraftInterfaceComponent implements OnInit {
 
       } else {
         //go to result page
-        sendSaveDeck();
+        this.sendSaveDeck();
         gradeDeck();
         console.log(sessionStorage.draft_total);
+        this.router.navigateByUrl('/summary');
       }
     }
     displayDeck(event.target.src);
@@ -63,6 +67,13 @@ export class DraftInterfaceComponent implements OnInit {
     console.log(event.target.getAttribute("data-draft-value"));
     console.log(sessionStorage.draft_total);
     sessionStorage.draft_total = parseFloat(sessionStorage.draft_total) + parseFloat(event.target.getAttribute("data-draft-value"));
+  }
+
+  sendSaveDeck(){
+    this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      console.log(res);
+    });
+
   }
 
   ngOnInit() {
@@ -107,7 +118,7 @@ export class DraftInterfaceComponent implements OnInit {
 }
 
 function displayDeck (image:string) {
-  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"75px\" height=\"100px\">");
+  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"60px\" height=\"80px\">");
 }
 
 function computerPick (){
@@ -170,9 +181,18 @@ function grabImage(cardName:string, id:number, dv:number){
   xhttp.open("GET", url, true);
   xhttp.send();
 }
+
 function sendSaveDeck(){
-  /*TODO*/
+  let xhttp = new XMLHttpRequest();
+  xhttp.open("POST","http://18.218.13.19:8090/save/deck", true);
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      /*TODO*/
+    }
+    xhttp.send();
+  }
 }
+
 function gradeDeck(){
   let grade = sessionStorage.draft_total;
   let grade_value = "Z"
