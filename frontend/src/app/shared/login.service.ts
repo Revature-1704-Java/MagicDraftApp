@@ -52,4 +52,12 @@ export class LoginService {
     this.loggedInUser.email = null;
   }
 
+  public setMyEmail(loggedInUserEmail: string) {
+    this.loggedInUser.email = loggedInUserEmail;
+  }
+
+  public getMyEmail(): string {
+    return this.loggedInUser.email;
+  }
+
 }
