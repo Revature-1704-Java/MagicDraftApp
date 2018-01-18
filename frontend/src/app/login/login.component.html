@@ -47,7 +47,7 @@
 		<div *ngIf='this.login.loggedIn' class='navbar-collapse collapse dual-collapse'>
 			<ul class='navbar-nav ml-auto'>
 				<li class='nav-item'>
-					{{this.loggedInUser?.email}}
+					<span>Welcome! You are currently logged in as: {{this.login.getMyEmail()}}</span>
 				</li>
 				<li class='nav-item'>
 					<button type='button' class='btn btn-warn' (click)='doLogout()'>Log Out</button>
