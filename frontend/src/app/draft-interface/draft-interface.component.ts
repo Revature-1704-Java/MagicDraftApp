@@ -53,18 +53,25 @@ export class DraftInterfaceComponent implements OnInit {
       } else {
         //go to result page
         sendSaveDeck();
+        gradeDeck();
+        console.log(sessionStorage.draft_total);
       }
     }
     displayDeck(event.target.src);
     let temp_deck = JSON.parse(sessionStorage.deck);
     temp_deck.push(event.target.name);
     sessionStorage.deck = JSON.stringify(temp_deck);
+
+    console.log(event.target.getAttribute("data-draft-value"));
+    console.log(sessionStorage.draft_total);
+    sessionStorage.draft_total = parseFloat(sessionStorage.draft_total) + parseFloat(event.target.getAttribute("data-draft-value"));
   }
 
   ngOnInit() {
     let xhttp = new XMLHttpRequest();
     sessionStorage.pickcounter = 0;
     sessionStorage.round = 1;
+    sessionStorage.draft_total = 0.0;
     let deck_array = [];
     sessionStorage.deck = JSON.stringify(deck_array);
     xhttp.open("POST","http://18.218.13.19:8090/generate/pack/players/2", true);
@@ -80,16 +87,12 @@ export class DraftInterfaceComponent implements OnInit {
         sessionStorage.pack_five = JSON.stringify(obj[4]);
         sessionStorage.pack_six = JSON.stringify(obj[5]);
 
-        // console.log(obj[0]);
-        // console.log(obj[1]);
-        // console.log(obj[2]);
-        // console.log(obj[3]);
-        // console.log(obj[4]);
-        // console.log(obj[5]);
-
-
-
-
+        console.log(obj[0]);
+        console.log(obj[1]);
+        console.log(obj[2]);
+        console.log(obj[3]);
+        console.log(obj[4]);
+        console.log(obj[5]);
 
 
         sessionStorage.current = JSON.stringify(obj[0]);
@@ -97,7 +100,7 @@ export class DraftInterfaceComponent implements OnInit {
         let pack = obj[0];
         for(let i = 0; i < pack.length; i++){
           console.log(pack[i].name);
-          grabImage(pack[i].name, i);
+          grabImage(pack[i].name, i, pack[i].draftValue);
         }
       }
     };
@@ -106,7 +109,7 @@ export class DraftInterfaceComponent implements OnInit {
 }
 
 function displayDeck (image:string) {
-  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"150px\" height=\"200px\">");
+  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"75px\" height=\"100px\">");
 }
 
 function computerPick (){
@@ -132,7 +135,7 @@ function displayCard() {
   let cp = JSON.parse(sessionStorage.current);
   console.log(cp)
   for(let index = 0; index < cp.length; index++){
-    grabImage(cp[index].name,index);
+    grabImage(cp[index].name,index, cp[index].draftValue);
   }
   for(let i=cp.length; i < 15; i++){
     document.getElementById(i + "").style.visibility = "hidden";
@@ -145,11 +148,10 @@ function resetImage() {
 }
 
 
-function grabImage(cardName:string, id:number){
+function grabImage(cardName:string, id:number, dv:number){
   let xhttp = new XMLHttpRequest();
-  let url = "https://api.magicthegathering.io/v1/cards?name=" + cardName;
+  let url = "https://api.magicthegathering.io/v1/cards?name=\"" + cardName + "\"";
   let answer = "";
-
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       let json = this.responseText;
@@ -164,7 +166,7 @@ function grabImage(cardName:string, id:number){
 
       document.getElementById(id + "").setAttribute("src", image_link);
       document.getElementById(id + "").setAttribute("name", cardName);
-
+      document.getElementById(id + "").setAttribute("data-draft-value", dv + "");
       // document.getElementById("demo").getElementById(id).addEventListener("click", draftCard(cardName));
       // document.getElementById("demo").innerHTML += ("<img id=\"" + id + "\" src=\"" + image_link + "\" width=\"150px\" height=\"200px\" onclick=\"draftCard(cardName)\">");
     }
@@ -173,11 +175,21 @@ function grabImage(cardName:string, id:number){
   xhttp.send();
 }
 function sendSaveDeck(){
-  let xhttp = new XMLHttpRequest();
-  xhttp.open("POST","http://18.218.13.19:8090/save/deck", true);
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      /*TODO*/
-    }
-    xhttp.send();
+  /*TODO*/
+}
+function gradeDeck(){
+  let grade = sessionStorage.draft_total;
+  let grade_value = "Z"
+  if(grade >= 90 && grade <= 185){
+      grade_value = "A";
+  } else if (grade >= 186 && grade <= 320) {
+    grade_value = "B";
+  } else if (grade >= 321 && grade <= 455) {
+    grade_value = "C";
+  } else if (grade >= 456 && grade <= 590) {
+    grade_value = "D";
+  } else if (grade >= 591 && grade <= 725) {
+    grade_value = "F";
+  }
+  sessionStorage.deck_grade = grade_value;
 }
