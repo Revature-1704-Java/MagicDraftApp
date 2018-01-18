@@ -1,1 +1,4 @@
-<p>draft-summary works!</p>
+<button name='home' (click)='goHome()'>< Home</button>
+<ul>
+  <li *ngFor='let card of this.deckImages'><img src='{{card}}'/></li>
+</ul>

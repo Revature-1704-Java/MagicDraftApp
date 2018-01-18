@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DeckService} from '../shared/deck.service';
+import { Router } from '@angular/router';
+
 declare let jquery:any;
 declare let $ :any;
 
@@ -10,7 +12,7 @@ declare let $ :any;
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor(public ds: DeckService) {}
+  constructor(public ds: DeckService, public router : Router) {}
 
   public draftCard(event: any) {
 
@@ -53,6 +55,7 @@ export class DraftInterfaceComponent implements OnInit {
       } else {
         //go to result page
         sendSaveDeck();
+        this.router.navigateByUrl('/summary');
       }
     }
     displayDeck(event.target.src);
@@ -106,7 +109,7 @@ export class DraftInterfaceComponent implements OnInit {
 }
 
 function displayDeck (image:string) {
-  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"75px\" height=\"100px\">");
+  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"60px\" height=\"80px\">");
 }
 
 function computerPick (){
@@ -172,6 +175,7 @@ function grabImage(cardName:string, id:number){
   xhttp.open("GET", url, true);
   xhttp.send();
 }
+
 function sendSaveDeck(){
   let xhttp = new XMLHttpRequest();
   xhttp.open("POST","http://18.218.13.19:8090/save/deck", true);
@@ -180,4 +184,5 @@ function sendSaveDeck(){
       /*TODO*/
     }
     xhttp.send();
+  }
 }
