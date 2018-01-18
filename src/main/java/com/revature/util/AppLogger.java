@@ -33,10 +33,21 @@ public class AppLogger {
 		logger.info(args[0] + " attemping to process signup.");
 	}
 	
+	@AfterReturning("execution(* com.revature.controller.DeckController.getPacks(..))")
+	public void loginGenerateDeck (JoinPoint jp) {
+		Object[] args = jp.getArgs();
+		logger.info(args[0] + " attempting to generate deck...");
+	}
+	
 	@AfterReturning("execution(* com.revature.controller.DeckController.saveDeck(..))")
 	public void logginSaveDeck (JoinPoint jp) {
 		Object[] args = jp.getArgs();
 		logger.info(args[0] + " attempting to save the deck");
 	}
 	
+	@AfterReturning("execution(* com.revature.controller.DeckController.getDeck(..))")
+	public void logginGetDeck(JoinPoint jp) {
+		Object[] args = jp.getArgs();
+		logger.info(args[0] + " attempting to get deck");
+	}
 }
