@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DeckService} from '../shared/deck.service';
+import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../shared/login.service';
 declare let jquery:any;
 declare let $ :any;
 
@@ -10,7 +12,7 @@ declare let $ :any;
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor(public ds: DeckService) {}
+  constructor(public ds: DeckService, private http: HttpClient, public loggedInUser: LoginService) {}
 
   public draftCard(event: any) {
 
@@ -52,13 +54,20 @@ export class DraftInterfaceComponent implements OnInit {
 
       } else {
         //go to result page
-        sendSaveDeck();
+        this.sendSaveDeck();
       }
     }
     displayDeck(event.target.src);
     let temp_deck = JSON.parse(sessionStorage.deck);
     temp_deck.push(event.target.name);
     sessionStorage.deck = JSON.stringify(temp_deck);
+  }
+
+  sendSaveDeck(){
+    this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      console.log(res);
+    });
+
   }
 
   ngOnInit() {
@@ -172,12 +181,4 @@ function grabImage(cardName:string, id:number){
   xhttp.open("GET", url, true);
   xhttp.send();
 }
-function sendSaveDeck(){
-  let xhttp = new XMLHttpRequest();
-  xhttp.open("POST","http://18.218.13.19:8090/save/deck", true);
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      /*TODO*/
-    }
-    xhttp.send();
-}
+
