@@ -24,12 +24,10 @@ export class DraftInterfaceComponent implements OnInit {
     //delete card from computer's pack and set the current pack to this pack
     sessionStorage.current = JSON.stringify(computerPick());
 
-    // console.log(sessionStorage.current);
     //swap our pack with the computer's
     sessionStorage.nextPack = JSON.stringify(current_pack);
 
-    // console.log(sessionStorage.current);
-    // sessionStorage.deck = event.target.name;
+
     if(sessionStorage.pickcounter != 14) {
       displayCard();
       sessionStorage.pickcounter = parseInt(sessionStorage.pickcounter) + 1;
@@ -167,8 +165,6 @@ function grabImage(cardName:string, id:number, dv:number){
       document.getElementById(id + "").setAttribute("src", image_link);
       document.getElementById(id + "").setAttribute("name", cardName);
       document.getElementById(id + "").setAttribute("data-draft-value", dv + "");
-      // document.getElementById("demo").getElementById(id).addEventListener("click", draftCard(cardName));
-      // document.getElementById("demo").innerHTML += ("<img id=\"" + id + "\" src=\"" + image_link + "\" width=\"150px\" height=\"200px\" onclick=\"draftCard(cardName)\">");
     }
   };
   xhttp.open("GET", url, true);
