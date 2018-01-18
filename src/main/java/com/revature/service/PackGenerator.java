@@ -37,25 +37,26 @@ public class PackGenerator {
 	
 	public List<List<Card>> generatePacks(int players){
 		List<List<Card>> packs = new ArrayList<List<Card>>();
+		List<Card> copyOfCardPool = new ArrayList<Card>(cardPool);
 		int numOfPacks = players * 3;
 		for(int i = 0; i < numOfPacks; i++) {
 			packs.add(generatePack(15));
 		}
+		cardPool = copyOfCardPool;
 		return packs;
 	}
 
 	private List<Card> generatePack(int numOfCards) {
 		List<Card> pack = new ArrayList<Card>(15);
-		List<Card> copyOfCardPool = new ArrayList<Card>(cardPool);
 		Random random = new Random();
-		int max = copyOfCardPool.size();
+		int max = cardPool.size();
 		int min = 0;
 		int index = 0;
 		for(int i = 0; i < numOfCards; i++) {
 			index = random.nextInt(max - min) + min;
-			pack.add(copyOfCardPool.get(index));
-			copyOfCardPool.remove(index);
-			max = copyOfCardPool.size();
+			pack.add(cardPool.get(index));
+			cardPool.remove(index);
+			max = cardPool.size();
 		}
 		return pack;
 	}
