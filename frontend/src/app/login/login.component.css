@@ -1,3 +1,19 @@
+a, u {
+    text-decoration: none !important;
+}
+
+nav {
+	margin-bottom: 0;
+}
+
+#github {
+	font-size: 18px;
+}
+#title {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-style: oblique;
+	font-size: 80%;
+}
 /* The Modal (background) */
 .modal {
 	display: none; /* Hidden by default */
@@ -11,7 +27,7 @@
 	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Modal Content Box */
 .modal-content {
 	background-color: #fefefe;
 	margin: 30% auto; /* 15% from the top and centered */

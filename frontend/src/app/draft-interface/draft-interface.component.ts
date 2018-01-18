@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {DeckService} from '../shared/deck.service';
 import { Router } from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../shared/login.service';
 declare let jquery:any;
 declare let $ :any;
 
@@ -12,7 +13,7 @@ declare let $ :any;
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor(public ds: DeckService, public router : Router) {}
+  constructor(public ds: DeckService, public router : Router, private http: HttpClient, public loggedInUser: LoginService) {}
 
   public draftCard(event: any) {
 
@@ -26,12 +27,10 @@ export class DraftInterfaceComponent implements OnInit {
     //delete card from computer's pack and set the current pack to this pack
     sessionStorage.current = JSON.stringify(computerPick());
 
-    // console.log(sessionStorage.current);
     //swap our pack with the computer's
     sessionStorage.nextPack = JSON.stringify(current_pack);
 
-    // console.log(sessionStorage.current);
-    // sessionStorage.deck = event.target.name;
+
     if(sessionStorage.pickcounter != 14) {
       displayCard();
       sessionStorage.pickcounter = parseInt(sessionStorage.pickcounter) + 1;
@@ -54,7 +53,9 @@ export class DraftInterfaceComponent implements OnInit {
 
       } else {
         //go to result page
-        sendSaveDeck();
+        this.sendSaveDeck();
+        gradeDeck();
+        console.log(sessionStorage.draft_total);
         this.router.navigateByUrl('/summary');
       }
     }
@@ -62,12 +63,24 @@ export class DraftInterfaceComponent implements OnInit {
     let temp_deck = JSON.parse(sessionStorage.deck);
     temp_deck.push(event.target.name);
     sessionStorage.deck = JSON.stringify(temp_deck);
+
+    console.log(event.target.getAttribute("data-draft-value"));
+    console.log(sessionStorage.draft_total);
+    sessionStorage.draft_total = parseFloat(sessionStorage.draft_total) + parseFloat(event.target.getAttribute("data-draft-value"));
+  }
+
+  sendSaveDeck(){
+    this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      console.log(res);
+    });
+
   }
 
   ngOnInit() {
     let xhttp = new XMLHttpRequest();
     sessionStorage.pickcounter = 0;
     sessionStorage.round = 1;
+    sessionStorage.draft_total = 0.0;
     let deck_array = [];
     sessionStorage.deck = JSON.stringify(deck_array);
     xhttp.open("POST","http://18.218.13.19:8090/generate/pack/players/2", true);
@@ -83,16 +96,12 @@ export class DraftInterfaceComponent implements OnInit {
         sessionStorage.pack_five = JSON.stringify(obj[4]);
         sessionStorage.pack_six = JSON.stringify(obj[5]);
 
-        // console.log(obj[0]);
-        // console.log(obj[1]);
-        // console.log(obj[2]);
-        // console.log(obj[3]);
-        // console.log(obj[4]);
-        // console.log(obj[5]);
-
-
-
-
+        console.log(obj[0]);
+        console.log(obj[1]);
+        console.log(obj[2]);
+        console.log(obj[3]);
+        console.log(obj[4]);
+        console.log(obj[5]);
 
 
         sessionStorage.current = JSON.stringify(obj[0]);
@@ -100,7 +109,7 @@ export class DraftInterfaceComponent implements OnInit {
         let pack = obj[0];
         for(let i = 0; i < pack.length; i++){
           console.log(pack[i].name);
-          grabImage(pack[i].name, i);
+          grabImage(pack[i].name, i, pack[i].draftValue);
         }
       }
     };
@@ -135,7 +144,7 @@ function displayCard() {
   let cp = JSON.parse(sessionStorage.current);
   console.log(cp)
   for(let index = 0; index < cp.length; index++){
-    grabImage(cp[index].name,index);
+    grabImage(cp[index].name,index, cp[index].draftValue);
   }
   for(let i=cp.length; i < 15; i++){
     document.getElementById(i + "").style.visibility = "hidden";
@@ -148,11 +157,10 @@ function resetImage() {
 }
 
 
-function grabImage(cardName:string, id:number){
+function grabImage(cardName:string, id:number, dv:number){
   let xhttp = new XMLHttpRequest();
-  let url = "https://api.magicthegathering.io/v1/cards?name=" + cardName;
+  let url = "https://api.magicthegathering.io/v1/cards?name=\"" + cardName + "\"";
   let answer = "";
-
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       let json = this.responseText;
@@ -167,9 +175,7 @@ function grabImage(cardName:string, id:number){
 
       document.getElementById(id + "").setAttribute("src", image_link);
       document.getElementById(id + "").setAttribute("name", cardName);
-
-      // document.getElementById("demo").getElementById(id).addEventListener("click", draftCard(cardName));
-      // document.getElementById("demo").innerHTML += ("<img id=\"" + id + "\" src=\"" + image_link + "\" width=\"150px\" height=\"200px\" onclick=\"draftCard(cardName)\">");
+      document.getElementById(id + "").setAttribute("data-draft-value", dv + "");
     }
   };
   xhttp.open("GET", url, true);
@@ -185,4 +191,21 @@ function sendSaveDeck(){
     }
     xhttp.send();
   }
+}
+
+function gradeDeck(){
+  let grade = sessionStorage.draft_total;
+  let grade_value = "Z"
+  if(grade >= 90 && grade <= 185){
+      grade_value = "A";
+  } else if (grade >= 186 && grade <= 320) {
+    grade_value = "B";
+  } else if (grade >= 321 && grade <= 455) {
+    grade_value = "C";
+  } else if (grade >= 456 && grade <= 590) {
+    grade_value = "D";
+  } else if (grade >= 591 && grade <= 725) {
+    grade_value = "F";
+  }
+  sessionStorage.deck_grade = grade_value;
 }
