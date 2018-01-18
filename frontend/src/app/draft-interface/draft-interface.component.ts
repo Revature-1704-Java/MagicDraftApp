@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DeckService} from '../shared/deck.service';
+import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../shared/login.service';
 declare let jquery:any;
 declare let $ :any;
 
@@ -10,7 +12,7 @@ declare let $ :any;
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor(public ds: DeckService) {}
+  constructor(public ds: DeckService, private http: HttpClient, public loggedInUser: LoginService) {}
 
   public draftCard(event: any) {
 
@@ -50,7 +52,7 @@ export class DraftInterfaceComponent implements OnInit {
 
       } else {
         //go to result page
-        sendSaveDeck();
+        this.sendSaveDeck();
         gradeDeck();
         console.log(sessionStorage.draft_total);
       }
@@ -63,6 +65,13 @@ export class DraftInterfaceComponent implements OnInit {
     console.log(event.target.getAttribute("data-draft-value"));
     console.log(sessionStorage.draft_total);
     sessionStorage.draft_total = parseFloat(sessionStorage.draft_total) + parseFloat(event.target.getAttribute("data-draft-value"));
+  }
+
+  sendSaveDeck(){
+    this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      console.log(res);
+    });
+
   }
 
   ngOnInit() {
@@ -170,6 +179,7 @@ function grabImage(cardName:string, id:number, dv:number){
   xhttp.open("GET", url, true);
   xhttp.send();
 }
+<<<<<<< HEAD
 function sendSaveDeck(){
   /*TODO*/
 }
@@ -189,3 +199,6 @@ function gradeDeck(){
   }
   sessionStorage.deck_grade = grade_value;
 }
+=======
+
+>>>>>>> SaveDeck
