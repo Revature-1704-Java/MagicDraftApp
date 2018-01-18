@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Card} from '../shared/card';
-import {ApiAccessService} from '../shared/api-access.service';
 
 @Component({
   selector: 'app-home-page',
@@ -10,11 +8,9 @@ import {ApiAccessService} from '../shared/api-access.service';
 
 export class HomePageComponent implements OnInit {
 
-  cards: Card[] = [];
-  constructor(private cardService: ApiAccessService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.cards = this.cardService.getCards();
   }
 
 }

@@ -1,0 +1,13 @@
+div {
+    height: 100vh;
+    background-image: url("http://i.imgur.com/lP6b13v.jpg");
+    background-repeat:   no-repeat;
+    background-size: cover;
+}
+
+#startDraft {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:50%;
+}

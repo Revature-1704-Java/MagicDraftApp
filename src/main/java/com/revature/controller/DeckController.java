@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -48,31 +51,25 @@ public class DeckController {
 	}
 	
 	@RequestMapping(value="save/deck", method=RequestMethod.POST)
-	public ResponseEntity<Deck> saveDeck(@RequestHeader("Authorization") String auth, @RequestBody String json) throws JsonParseException, JsonMappingException, IOException{
+	public ResponseEntity<Deck> saveDeck(@RequestBody String json) throws JsonParseException, JsonMappingException, JSONException{
 		
-		User user;
-		String userEmail = null;
-		try {
-			userEmail = Jwts.parser().setSigningKey(key).parseClaimsJws(auth).getBody().getSubject();
-		}catch(Exception e) {
-			return null;
-		}
+		JSONObject res = new JSONObject(json);
+		JSONArray reqDeck = res.getJSONArray("deck");
 		
-		ObjectMapper mapper = new ObjectMapper();
-		@SuppressWarnings("unchecked")
-		List<String> cardNames = mapper.readValue(json, List.class);
+		
 		List<Card> cards = new ArrayList<Card>();
-		for(int i = 0; i < cardNames.size(); i++) {
-			cards.add(dbService.cardFindByName(cardNames.get(i)));
+		for(int i = 0; i < reqDeck.length(); i++) {
+			cards.add(dbService.cardFindByName(reqDeck.getString(i)));
 		}
 		
-		user = dbService.userFindByEmail(userEmail);
+		User user = dbService.userFindByEmail(res.getString("email"));
 		
 		Deck newDeck = new Deck();
 		newDeck.setCreationTime(new Date());
 		newDeck.setOwner(user);
 		newDeck.setCards(cards);
 		Deck deck = dbService.createDeck(newDeck);
+		
 		return new ResponseEntity<Deck>(deck, HttpStatus.OK);
 	}
 	

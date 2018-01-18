@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DeckService} from '../shared/deck.service';
+import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../shared/login.service';
 declare let jquery:any;
 declare let $ :any;
 
@@ -10,7 +12,7 @@ declare let $ :any;
 })
 export class DraftInterfaceComponent implements OnInit {
 
-  constructor(public ds: DeckService) {}
+  constructor(public ds: DeckService, private http: HttpClient, public loggedInUser: LoginService) {}
 
   public draftCard(event: any) {
 
@@ -24,12 +26,10 @@ export class DraftInterfaceComponent implements OnInit {
     //delete card from computer's pack and set the current pack to this pack
     sessionStorage.current = JSON.stringify(computerPick());
 
-    // console.log(sessionStorage.current);
     //swap our pack with the computer's
     sessionStorage.nextPack = JSON.stringify(current_pack);
 
-    // console.log(sessionStorage.current);
-    // sessionStorage.deck = event.target.name;
+
     if(sessionStorage.pickcounter != 14) {
       displayCard();
       sessionStorage.pickcounter = parseInt(sessionStorage.pickcounter) + 1;
@@ -52,7 +52,7 @@ export class DraftInterfaceComponent implements OnInit {
 
       } else {
         //go to result page
-        sendSaveDeck();
+        this.sendSaveDeck();
         gradeDeck();
         console.log(sessionStorage.draft_total);
       }
@@ -65,6 +65,13 @@ export class DraftInterfaceComponent implements OnInit {
     console.log(event.target.getAttribute("data-draft-value"));
     console.log(sessionStorage.draft_total);
     sessionStorage.draft_total = parseFloat(sessionStorage.draft_total) + parseFloat(event.target.getAttribute("data-draft-value"));
+  }
+
+  sendSaveDeck(){
+    this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      console.log(res);
+    });
+
   }
 
   ngOnInit() {
@@ -167,13 +174,12 @@ function grabImage(cardName:string, id:number, dv:number){
       document.getElementById(id + "").setAttribute("src", image_link);
       document.getElementById(id + "").setAttribute("name", cardName);
       document.getElementById(id + "").setAttribute("data-draft-value", dv + "");
-      // document.getElementById("demo").getElementById(id).addEventListener("click", draftCard(cardName));
-      // document.getElementById("demo").innerHTML += ("<img id=\"" + id + "\" src=\"" + image_link + "\" width=\"150px\" height=\"200px\" onclick=\"draftCard(cardName)\">");
     }
   };
   xhttp.open("GET", url, true);
   xhttp.send();
 }
+
 function sendSaveDeck(){
   /*TODO*/
 }
