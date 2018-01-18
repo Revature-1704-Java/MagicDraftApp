@@ -43,7 +43,6 @@ export class DraftInterfaceComponent implements OnInit {
       //last pick so we can move on to the next round
     } else {
       if(sessionStorage.round == 1) {
-        console.log("ALSKDJALSKDJALSKDJASLKDJASLKDJALSKDJALSKDJLKSAD");
         sessionStorage.round = parseInt(sessionStorage.round) + 1;
         sessionStorage.current = sessionStorage.pack_three;
         sessionStorage.nextPack = sessionStorage.pack_four;
@@ -115,7 +114,7 @@ export class DraftInterfaceComponent implements OnInit {
 }
 
 function displayDeck (image:string) {
-  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"150px\" height=\"200px\">");
+  document.getElementById("display_deck").innerHTML += ("<img src=\"" + image + "\" width=\"75px\" height=\"100px\">");
 }
 
 function computerPick (){
