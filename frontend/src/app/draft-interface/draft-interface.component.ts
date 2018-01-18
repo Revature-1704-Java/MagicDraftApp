@@ -70,9 +70,11 @@ export class DraftInterfaceComponent implements OnInit {
   }
 
   sendSaveDeck(){
-    this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
-      console.log(res);
-    });
+    if(this.loggedInUser.loggedIn) {
+      this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+        console.log(res);
+      });
+    }
 
   }
 

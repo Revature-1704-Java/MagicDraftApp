@@ -10,6 +10,7 @@ import {LoginComponent} from './login/login.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {FooterComponent} from './footer/footer.component';
 import {DraftInterfaceComponent} from './draft-interface/draft-interface.component';
+import {DraftSummaryComponent} from './draft-summary/draft-summary.component'
 
 import {LoginService} from './shared/login.service';
 import {DeckService} from './shared/deck.service';
@@ -21,7 +22,8 @@ import {DeckService} from './shared/deck.service';
     LoginComponent,
     HomePageComponent,
     FooterComponent,
-    DraftInterfaceComponent
+    DraftInterfaceComponent,
+    DraftSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import {DeckService} from './shared/deck.service';
     RouterModule.forRoot([
       {path: '', component: HomePageComponent},
       {path: 'draft', component: DraftInterfaceComponent},
+      {path: 'summary', component: DraftSummaryComponent}
     ]),
     HttpClientModule,
     HttpClientXsrfModule.withOptions({
