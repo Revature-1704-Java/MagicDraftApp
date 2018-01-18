@@ -16,15 +16,8 @@ export class DraftInterfaceComponent implements OnInit {
 
     let current_pack = JSON.parse(sessionStorage.current);
     let next_pack = JSON.parse(sessionStorage.nextPack);
-    console.log("*");
-    console.log("*");
-    console.log(event.target.name);
-    console.log("*");
-    console.log("*");
     for(let index = 0; index < current_pack.length; index++){
-      console.log(current_pack[index].name);
       if(current_pack[index].name == event.target.name){
-        console.log("---------------------deleting card-----------------------------------");
         current_pack.splice(index, 1);
       }
     }
@@ -38,50 +31,48 @@ export class DraftInterfaceComponent implements OnInit {
     // console.log(sessionStorage.current);
     // sessionStorage.deck = event.target.name;
     if(sessionStorage.pickcounter != 14) {
-      console.log(sessionStorage.pickcounter);
       displayCard();
+      sessionStorage.pickcounter = parseInt(sessionStorage.pickcounter) + 1;
       //last pick so we can move on to the next round
     } else {
       if(sessionStorage.round == 1) {
-        console.log("ALSKDJALSKDJALSKDJASLKDJASLKDJALSKDJALSKDJLKSAD");
         sessionStorage.round = parseInt(sessionStorage.round) + 1;
         sessionStorage.current = sessionStorage.pack_three;
         sessionStorage.nextPack = sessionStorage.pack_four;
         resetImage();
         displayCard();
+        sessionStorage.pickcounter = 0;
       } else if  (sessionStorage.round == 2){
+        sessionStorage.round = parseInt(sessionStorage.round) + 1;
         sessionStorage.current = sessionStorage.pack_five;
         sessionStorage.nextPack = sessionStorage.pack_six;
         resetImage();
         displayCard();
-      //go to result page
-      } else {
+        sessionStorage.pickcounter = 0;
 
+      } else {
+        //go to result page
+        sendSaveDeck();
       }
     }
-    // console.log(sessionStorage.deck);
-    // $(event.target).hide();
     displayDeck(event.target.src);
-
-    sessionStorage.pickcounter = parseInt(sessionStorage.pickcounter) + 1;
+    let temp_deck = JSON.parse(sessionStorage.deck);
+    temp_deck.push(event.target.name);
+    sessionStorage.deck = JSON.stringify(temp_deck);
   }
 
   ngOnInit() {
     let xhttp = new XMLHttpRequest();
     sessionStorage.pickcounter = 0;
     sessionStorage.round = 1;
+    let deck_array = [];
+    sessionStorage.deck = JSON.stringify(deck_array);
     xhttp.open("POST","http://18.218.13.19:8090/generate/pack/players/2", true);
     xhttp.onreadystatechange = function() {
       if (xhttp.readyState == 4 && xhttp.status == 200) {
         let json = xhttp.responseText;
         let obj = JSON.parse(json);
-        // for(let counter = 0; counter < obj.length; counter++){
-        //   let draftPack = obj[counter];
-        //   // console.log(draftPack);
-        //   // sessionStorage.setItem(String(counter), JSON.stringify(draftPack));
-        //   sessionStorage.counter = JSON.stringify(draftPack);
-        //   console.log(sessionStorage.counter);
-        // }
+
         sessionStorage.pack_one = JSON.stringify(obj[0]);
         sessionStorage.pack_two = JSON.stringify(obj[1]);
         sessionStorage.pack_three = JSON.stringify(obj[2]);
@@ -89,12 +80,12 @@ export class DraftInterfaceComponent implements OnInit {
         sessionStorage.pack_five = JSON.stringify(obj[4]);
         sessionStorage.pack_six = JSON.stringify(obj[5]);
 
-        console.log(obj[0]);
-        console.log(obj[1]);
-        console.log(obj[2]);
-        console.log(obj[3]);
-        console.log(obj[4]);
-        console.log(obj[5]);
+        // console.log(obj[0]);
+        // console.log(obj[1]);
+        // console.log(obj[2]);
+        // console.log(obj[3]);
+        // console.log(obj[4]);
+        // console.log(obj[5]);
 
 
 
@@ -173,14 +164,6 @@ function grabImage(cardName:string, id:number){
 
       document.getElementById(id + "").setAttribute("src", image_link);
       document.getElementById(id + "").setAttribute("name", cardName);
-      // console.log(image_link);
-      // document.getElementById("demo").innerHTML += ("<img src=\"" + image_link + "\">");
-      // // console.log(document.getElementById(0).id);
-      // document.getElementById(id).src = image_link;
-      // document.getElementById(id).name = cardName;
-      // document.getElementById(id).addEventListener("click", draftCard(cardName));
-      // document.getElementById(id).addEventListener("click", draftCard(cardName));
-      // document.getElementById("demo").innerHTML += ("<img id=\"" + id + "\" src=\"" + image_link + "\" width=\"150px\" height=\"200px\" (click)=\"draftCard($event)\">");
 
       // document.getElementById("demo").getElementById(id).addEventListener("click", draftCard(cardName));
       // document.getElementById("demo").innerHTML += ("<img id=\"" + id + "\" src=\"" + image_link + "\" width=\"150px\" height=\"200px\" onclick=\"draftCard(cardName)\">");
@@ -188,4 +171,13 @@ function grabImage(cardName:string, id:number){
   };
   xhttp.open("GET", url, true);
   xhttp.send();
+}
+function sendSaveDeck(){
+  let xhttp = new XMLHttpRequest();
+  xhttp.open("POST","http://18.218.13.19:8090/save/deck", true);
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      /*TODO*/
+    }
+    xhttp.send();
 }
