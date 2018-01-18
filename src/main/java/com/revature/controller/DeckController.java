@@ -48,14 +48,14 @@ public class DeckController {
 	}
 	
 	@RequestMapping(value="save/deck", method=RequestMethod.POST)
-	public ResponseEntity<String> saveDeck(@RequestHeader("Authorization") String auth, @RequestBody String json) throws JsonParseException, JsonMappingException, IOException{
+	public ResponseEntity<Deck> saveDeck(@RequestHeader("Authorization") String auth, @RequestBody String json) throws JsonParseException, JsonMappingException, IOException{
 		
 		User user;
 		String userEmail = null;
 		try {
 			userEmail = Jwts.parser().setSigningKey(key).parseClaimsJws(auth).getBody().getSubject();
 		}catch(Exception e) {
-			return new ResponseEntity<String>("Could Not Verify Token.", HttpStatus.UNAUTHORIZED);
+			return null;
 		}
 		
 		ObjectMapper mapper = new ObjectMapper();
@@ -73,7 +73,7 @@ public class DeckController {
 		newDeck.setOwner(user);
 		newDeck.setCards(cards);
 		Deck deck = dbService.createDeck(newDeck);
-		return new ResponseEntity<String>(HttpStatus.OK);
+		return new ResponseEntity<Deck>(deck, HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="view/deck/{id}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
