@@ -49,7 +49,7 @@ export class DraftInterfaceComponent implements OnInit {
         sessionStorage.nextPack = sessionStorage.pack_four;
         resetImage();
         displayCard();
-      } else if  (sessionStorage == 2){
+      } else if  (sessionStorage.round == 2){
         sessionStorage.current = sessionStorage.pack_five;
         sessionStorage.nextPack = sessionStorage.pack_six;
         resetImage();
@@ -144,17 +144,17 @@ function displayCard() {
     grabImage(cp[index].name,index);
   }
   for(let i=cp.length; i < 15; i++){
-    document.getElementById(i).style.visibility = "hidden";
+    document.getElementById(i + "").style.visibility = "hidden";
   }
 }
 function resetImage() {
   for(let index = 0; index < 15; index++){
-    document.getElementById(index).setAttribute("visible", true);
+    document.getElementById(index + "").style.visibility = "visible";
   }
 }
 
 
-function grabImage(cardName:string, id:int){
+function grabImage(cardName:string, id:number){
   let xhttp = new XMLHttpRequest();
   let url = "https://api.magicthegathering.io/v1/cards?name=" + cardName;
   let answer = "";
@@ -171,8 +171,8 @@ function grabImage(cardName:string, id:int){
         }
       }
 
-      document.getElementById(id).src = image_link;
-      document.getElementById(id).name = cardName;
+      document.getElementById(id + "").setAttribute("src", image_link);
+      document.getElementById(id + "").setAttribute("name", cardName);
       // console.log(image_link);
       // document.getElementById("demo").innerHTML += ("<img src=\"" + image_link + "\">");
       // // console.log(document.getElementById(0).id);
