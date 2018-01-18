@@ -6,3 +6,6 @@ img:hover {
     -o-box-shadow: 0 0 10px #333;  
     -ms-box-shadow: 0 0 10px #333;
 }
+div {
+    padding-bottom:60px;
+}
