@@ -13,7 +13,7 @@ export class DraftInterfaceComponent implements OnInit {
   ngOnInit() {
     let xhttp = new XMLHttpRequest();
     let pack_flag = 1;
-    xhttp.open("POST","http://18.216.223.139:8090/generate/pack/players/2", true);
+    xhttp.open("POST","http://18.218.13.19:8090/generate/pack/players/2", true);
     xhttp.onreadystatechange = function() {
       if (xhttp.readyState == 4 && xhttp.status == 200) {
         let json = xhttp.responseText;

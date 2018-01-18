@@ -32,7 +32,7 @@
 		<h1><a class="navbar-brand d-flex mx-auto" class="font-italic" href="#">
 			Magic The Gathering
 		</a></h1>
-		<div class="navbar-collapse collapse dual-collapse">
+		<div *ngIf='!this.login.loggedIn' class="navbar-collapse collapse dual-collapse">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<button type='button' class='btn btn-success' data-toggle='modal'
@@ -42,7 +42,16 @@
 					<button type="button" class="btn btn-primary" data-toggle="modal"
 					data-target="#registerModal">Register</button>
 				</li>
-
+			</ul>
+		</div>
+		<div *ngIf='this.login.loggedIn' class='navbar-collapse collapse dual-collapse'>
+			<ul class='navbar-nav ml-auto'>
+				<li class='nav-item'>
+					{{this.loggedInUser?.email}}
+				</li>
+				<li class='nav-item'>
+					<button type='button' class='btn btn-warn' (click)='doLogout()'>Log Out</button>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -55,14 +64,14 @@
 				<div class="modal-header">
 					<h4 class="modal-title" id="loginModal">Sign In</h4>
 				</div>
-				<form (ngSubmit)='processLogin()' id='loginForm' name='loginForm' #loginForm='ngForm'>
+				<form (ngSubmit)='doLogin()' id='loginForm' name='loginForm' #loginForm='ngForm'>
 					<div class="modal-body">
 						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='email' id='email' placeholder='Email'/>
 				    <input type="password" class="form-control" [(ngModel)]='currentPwd' name='password' id='password' placeholder='Password'/>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type='submit' class="btn btn-primary">Save</button>
+						<button type='button' (click)='doLogin()' class="btn btn-primary" data-dismiss='modal'>Save</button>
 					</div>
 				</form>
 			</div>
@@ -79,14 +88,14 @@
 				<div class="modal-header">
 					<h4 class="modal-title" id="registerModal">Registration</h4>
 				</div>
-				<form (ngSubmit)='processRegistration()' id='registrationForm' name='registrationForm' #registrationForm='ngForm'>
+				<form id='registrationForm' name='registrationForm' #registrationForm='ngForm'>
 					<div class="modal-body">
 						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='regEmail' id='regEmail' placeholder='Email'/>
 				    <input type="password" class="form-control" [(ngModel)]='currentPwd' name='regPass' id='regPass' placeholder='Password'/>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="submit" class="btn btn-primary">Save</button>
+						<button type="button" (click)='doRegister()' class="btn btn-primary" data-dismiss='modal'>Save</button>
 					</div>
 				</form>
 			</div>
