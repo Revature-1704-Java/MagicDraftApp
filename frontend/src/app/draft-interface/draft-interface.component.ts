@@ -179,7 +179,7 @@ function grabImage(cardName:string, id:number, dv:number){
   xhttp.open("GET", url, true);
   xhttp.send();
 }
-<<<<<<< HEAD
+
 function sendSaveDeck(){
   /*TODO*/
 }
@@ -199,6 +199,3 @@ function gradeDeck(){
   }
   sessionStorage.deck_grade = grade_value;
 }
-=======
-
->>>>>>> SaveDeck
