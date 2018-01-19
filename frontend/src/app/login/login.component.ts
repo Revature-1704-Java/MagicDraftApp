@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../shared/login.service';
 
@@ -7,13 +7,13 @@ import { LoginService } from '../shared/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
+  public currentEmail: string;
+  public currentPwd: string;
 
-  public currentEmail : string;
-  public currentPwd : string;
+  constructor(public login: LoginService) { }
 
-  constructor(public login : LoginService) {}
-  
   ngOnInit() {
   }
 

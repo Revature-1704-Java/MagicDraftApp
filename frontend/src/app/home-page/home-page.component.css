@@ -1,19 +1,11 @@
+ul {
+    list-style-type: none;
+    position: relative;
+    top: 20vh;
+}
+
 li {
     margin: 10px;
-}
-
-ul {
-  list-style-type: none;
-  position: relative;
-  top: 20vh;
-}
-
-.text-center {
-    height: 100vh;
-    background-image: url("http://i.imgur.com/lP6b13v.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom:60px;
 }
 
 #start-draft {
@@ -27,4 +19,12 @@ ul {
 
 #user-deck {
     font-size: 20px;
+}
+
+.text-center {
+    height: 100vh;
+    background-image: url("http://i.imgur.com/lP6b13v.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom:60px;
 }

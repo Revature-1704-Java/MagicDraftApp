@@ -1,10 +1,12 @@
 a, u {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
+
 li {
 	display:inline-block;
-	padding: 10px;
+	padding-left: 10px;
  }
+
 nav {
 	margin-bottom: 0;
 }
@@ -13,14 +15,17 @@ nav {
 	font-size: 14px;
 	padding-right: 15vh;
 }
+
 #loggedInMessage {
 	font-size: 14px;
 }
+
 #title {
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-style: oblique;
 	font-size: 24px;
 }
+
 /* The Modal (background) */
 .modal {
 	display: none; /* Hidden by default */

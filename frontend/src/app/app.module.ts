@@ -1,20 +1,19 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {HttpClientXsrfModule} from '@angular/common/http';
-import {AppComponent} from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientXsrfModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
 
-import {LoginComponent} from './login/login.component';
-import {HomePageComponent} from './home-page/home-page.component';
-import {FooterComponent} from './footer/footer.component';
-import {DraftInterfaceComponent} from './draft-interface/draft-interface.component';
-import {DraftSummaryComponent} from './draft-summary/draft-summary.component'
+import { LoginComponent } from './login/login.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { DraftInterfaceComponent } from './draft-interface/draft-interface.component';
+import { DraftSummaryComponent } from './draft-summary/draft-summary.component'
 
-import {LoginService} from './shared/login.service';
-import {DeckService} from './shared/deck.service';
-
+import { LoginService } from './shared/login.service';
+import { DeckService } from './shared/deck.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +28,9 @@ import {DeckService} from './shared/deck.service';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: '', component: HomePageComponent},
-      {path: 'draft', component: DraftInterfaceComponent},
-      {path: 'summary', component: DraftSummaryComponent}
+      { path: '', component: HomePageComponent },
+      { path: 'draft', component: DraftInterfaceComponent },
+      { path: 'summary', component: DraftSummaryComponent }
     ]),
     HttpClientModule,
     HttpClientXsrfModule.withOptions({
@@ -42,4 +41,4 @@ import {DeckService} from './shared/deck.service';
   providers: [LoginService, DeckService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
