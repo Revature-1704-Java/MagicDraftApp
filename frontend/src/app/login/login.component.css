@@ -1,12 +1,19 @@
 a, u {
     text-decoration: none !important;
 }
-
+li {
+	display:inline-block;
+	padding: 10px;
+ }
 nav {
 	margin-bottom: 0;
 }
 
 #github {
+	font-size: 14px;
+	padding-right: 15vh;
+}
+#loggedInMessage {
 	font-size: 14px;
 }
 #title {

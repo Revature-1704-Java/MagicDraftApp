@@ -23,7 +23,5 @@ export class HomePageComponent implements OnInit {
         this.login.viewPastDeck(this.login.loggedInUser.decks.indexOf(deck));
       }
     }
-
   }
-
 }
