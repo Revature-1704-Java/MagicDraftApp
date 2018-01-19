@@ -25,7 +25,6 @@ export class LoginService {
     this.http.post<User>('http://18.218.13.19:8090/login', myForm).subscribe(res => {
       if(res !== null) {
         this.loggedIn = true;
-        console.log(res);
         this.loggedInUser.email = res.email;
         this.loggedInUser.decks = res.decks;
         return true;
@@ -39,15 +38,11 @@ export class LoginService {
     myForm.append('email', email);
     myForm.append('password', password);
 
-    this.http.post('http://18.218.13.19:8090/signup', myForm).subscribe(res => {
-      console.log(res);
-    });
+    this.http.post('http://18.218.13.19:8090/signup', myForm);
   }
 
   public processLogout() {
-    this.http.post('http://18.218.13.19:8090/logout', this.loggedInUser).subscribe(res => {
-      console.log(res);
-    });
+    this.http.post('http://18.218.13.19:8090/logout', this.loggedInUser);
     this.loggedIn = false;
     this.currentEmail = null;
     this.currentPwd = null;
@@ -63,15 +58,10 @@ export class LoginService {
   }
 
   public viewPastDeck(deckId : number) {
-    console.log(this.loggedInUser.decks[deckId]);
-    let deckArray = JSON.stringify([]);
-    let temp = JSON.parse(deckArray)
+    let deckArray = []
     for(let i = 0; i < this.loggedInUser.decks[deckId].cards.length; i++) {
-      console.log(this.loggedInUser.decks[deckId].cards[i].name);
+      deckArray.push(this.loggedInUser.decks[deckId].cards[i].name);
     }
-    deckArray = JSON.stringify(temp);
-
-
     sessionStorage.deck = JSON.stringify(deckArray);
     this.router.navigateByUrl('/summary')
   }
