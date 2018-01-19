@@ -3,6 +3,8 @@ import {DeckService} from '../shared/deck.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../shared/login.service';
+import { Deck } from '../shared/deck';
+import { Card } from '../shared/card'; 
 declare let jquery:any;
 declare let $ :any;
 
@@ -72,7 +74,15 @@ export class DraftInterfaceComponent implements OnInit {
   sendSaveDeck(){
     if(this.loggedInUser.loggedIn) {
       this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
-        console.log(res);
+        let deck: Deck = {cards: []};
+        let cards: Card[] = [];
+        let resCards: Card[] = res["cards"];
+        for(let i = 0; i  < resCards.length; i++){
+          cards.push({name: resCards[i].name, imageUrl: "https://api.magicthegathering.io/v1/cards?name=\"" + resCards[i].name + "\""});
+        }
+        deck.cards = cards;
+        console.log(this.loggedInUser.loggedInUser.decks);
+        this.loggedInUser.loggedInUser.decks.push(deck);
       });
     }
 
