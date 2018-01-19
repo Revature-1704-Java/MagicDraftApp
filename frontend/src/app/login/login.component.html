@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+	 crossorigin="anonymous">
+
+	<!-- responsive viewport tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+	<!-- start navbar -->
+	<nav class="navbar navbar-expand-md" style="background-color:black">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse collapse dual-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li id="github" class="nav-item">
+					<a class="nav-link" href="https://github.com/Revature-1704-Java/MagicDraftApp">
+						<img src="https://kscopeonline.com/wp-content/uploads/2017/03/magic-the-gathering-logo.png" width="64" height="36">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a class="navbar-brand d-flex mx-auto" id="title" (click)="home()" href='javascript:void(0)'>
+			Magic The Gathering Draft
+		</a>
+		<div *ngIf='!this.login.loggedIn' class="navbar-collapse collapse dual-collapse">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<button type='button' class='btn btn-success btn-lg' data-toggle='modal' data-target=#loginModal>Login</button>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">Register</button>
+				</li>
+			</ul>
+		</div>
+		<div *ngIf='this.login.loggedIn' class='navbar-collapse collapse dual-collapse'>
+			<ul class='navbar-nav ml-auto'>
+				<li id="loggedInMessage" class='nav-item'>
+					<span>Hi {{this.login.getMyEmail()}}</span>
+				</li>
+				<li class='nav-item'>
+					<button type='button' class='btn btn-success btn-md' (click)='doLogout()'>Log Out</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- end navbar -->
+
+	<!-- sign in modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="loginModal">Sign In</h4>
+				</div>
+				<form (ngSubmit)='doLogin()' id='loginForm' name='loginForm' #loginForm='ngForm'>
+					<div class="modal-body">
+						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='email' id='email' placeholder='Email' />
+						<br>
+						<input type="password" class="form-control" [(ngModel)]='currentPwd' name='password' id='password' placeholder='Password'
+						/>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type='button' (click)='doLogin()' class="btn btn-primary" data-dismiss='modal'>Sign In</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- end sign in modal -->
+
+	<!-- Register Modal -->
+	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="registerModal">Registration</h4>
+				</div>
+				<form id='registrationForm' name='registrationForm' #registrationForm='ngForm'>
+					<div class="modal-body">
+						<input type='text' class='form-control' [(ngModel)]='currentEmail' name='regEmail' id='regEmail' placeholder='Email' />
+						<br>
+						<input type="password" class="form-control" [(ngModel)]='currentPwd' name='regPass' id='regPass' placeholder='Password' />
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" (click)='doRegister()' class="btn btn-primary" data-dismiss='modal'>Register</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- end register modal -->
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+</body>
+</html>

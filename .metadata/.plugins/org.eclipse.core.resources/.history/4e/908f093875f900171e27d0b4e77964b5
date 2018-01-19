@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<!-- <meta charset="utf-8">    -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+	integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+	crossorigin="anonymous">
+
+<!-- responsive viewport tag -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+
+
+	<!-- start navbar -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target=".dual-collapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse collapse dual-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="https://github.com/Revature-1704-Java/MagicDraftApp">Github.com</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+			</ul>
+		</div>
+		<a class="navbar-brand d-flex mx-auto" href="#">Magic The
+			Gathering</a>
+		<div class="navbar-collapse collapse dual-collapse">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><input type='text' class='form-control'
+					name='username' placeholder='Username'></li>
+				<li class="nav-item"><input type='text' class='form-control'
+					name='password' placeholder='Password'></li>
+				<li class="nav-item">
+					<button type='button' class='btn btn-default'>Sign In</button>
+				</li>
+								
+				<li class="nav-item">
+					<button type="button" class="btn btn-primary" data-toggle="modal"
+						data-target="#registerModal">Register</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- end navbar -->
+<!-- Modal -->
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">Registration</h4>
+			</div>
+			<div class="modal-body">...</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end modal -->
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

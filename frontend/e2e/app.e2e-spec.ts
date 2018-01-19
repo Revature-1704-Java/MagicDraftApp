@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('mtgcube-draft App', () => {
+describe('mtgdraft-app App', () => {
   let page: AppPage;
 
   beforeEach(() => {

@@ -1,0 +1,8 @@
+<div class="text-center">
+  <button name='home' (click)='goHome()' class="btn btn-success btn-lg" style="position:relative; top: 20%;">Home</button>
+</div>
+<ul>
+  <li *ngFor='let card of this.deckImages'>
+    <img src='{{card}}' />
+  </li>
+</ul>

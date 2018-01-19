@@ -1,0 +1,14 @@
+<div class="text-center" >
+	<a routerLink='/draft' routerLinkActive='active'>
+		<button id="start-draft" class="btn btn-success btn-lg">Start Draft</button>
+	</a>
+	<div class='pastDecks' *ngIf='this.login.loggedIn'>
+		<ul>
+			<li *ngFor='let deck of this.login.loggedInUser.decks'>
+				<a (click)='this.pastDeck(deck)' href='javascript:void(0)'>
+					<button id="user-deck" class="btn btn-primary btn-md">>Deck {{getDeckId(deck) + 1}}</button>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

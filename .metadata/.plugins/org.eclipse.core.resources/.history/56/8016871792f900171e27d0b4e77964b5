@@ -1,0 +1,9 @@
+<figure class="figure">
+	<img src="http://placehold.it/150x200" class="figure-img img-fluid rounded">
+	<figcaption class="figure-caption">
+		<h5><a [routerLink]="['/cards', card.id]">{{ card.title }}</a>
+			<span>{{ card.price | currency }}</span>
+		</h5>
+		<p> {{ card.shortDescription }}</p>
+	</figcaption>
+</figure>

@@ -1,0 +1,70 @@
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup } from '@angular/forms/src/model';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+@Component({
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
+})
+export class ModalComponent {
+
+ public submission = { eventType: '', gradingFormat: '', state: '', cost: '', eventDate: '', workMissed: '', lastReview: ''};
+  @ViewChild('modalClose') modalClose: ElementRef;
+public counter = Array;
+    constructor(private modalService: NgbModal) {}
+  ngOnInit() {
+  }
+
+  days(n: number): Array<number> {
+    return new Array(n);
+  }
+
+  submit(): void {
+    const eType: string = this.submission.eventType;
+    const format: string = this.submission.gradingFormat;
+    const state: string = this.submission.state;
+    const cost: string = this.submission.cost;
+
+    let eMonth: string = this.submission.eventDate['month'].toString();
+    if (eMonth.length < 2) {
+      eMonth = '0' + eMonth;
+    }
+    let eDay: string = this.submission.eventDate['day'].toString();
+    if (eDay.length < 2) {
+      eDay = '0' + eDay;
+    }
+    const eDate: string = this.submission.eventDate['year'] + '-' + eMonth + '-' + eDay;
+
+    const missed: string = 'P' + this.submission.workMissed + 'D';
+
+    let lMonth: string = this.submission.lastReview['month'].toString();
+    if (lMonth.length < 2) {
+      lMonth = '0' + lMonth;
+    }
+    let lDay: string = this.submission.lastReview['day'].toString();
+    if (lDay.length < 2) {
+      lDay = '0' + lDay;
+    }
+    const last: string = this.submission.lastReview['year'] + '-' + lMonth + '-' + lDay;
+
+
+
+
+    const body = new HttpParams()
+      .set('event type', eType)
+      .set('grading format', format)
+      .set('state', state)
+      .set('cost', cost)
+      .set('event date', eDate)
+      .set('work time missed', missed)
+      .set('last reviewed date', last);
+
+    const header = new HttpHeaders()
+      .set('Content-Type', 'application/x-www-form-urlencoded');
+
+
+    location.reload();
+  }
+}

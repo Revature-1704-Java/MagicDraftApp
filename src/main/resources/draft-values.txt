@@ -1,0 +1,720 @@
+Dragon Hunter $Draft Number:12.39
+Gideon's Lawkeeper $Draft Number:7.93
+Kytheon, Hero of Akros $Draft Number:7.49
+Mardu Woe-Reaper $Draft Number:12.46
+Mother of Runes $Draft Number:6.93
+Soldier of the Pantheon $Draft Number:11.54
+Student of Warfare $Draft Number:10.22
+Weathered Wayfarer $Draft Number:11.16
+Accorder Paladin $Draft Number:9.28
+Anafenza, Kin-Tree Spirit $Draft Number:6.37
+Consul's Lieutenant $Draft Number:7.01
+Containment Priest $Draft Number:10.15
+Eight-and-a-Half-Tails $Draft Number:6.43
+Hidden Dragonslayer $Draft Number:6.59
+Imposing Sovereign $Draft Number:7.52
+Kami of Ancient Law $Draft Number:12.1
+Knight of Meadowgrain $Draft Number:7.68
+Kor Skyfisher $Draft Number:11.18
+Loyal Cathar $Draft Number:8.08
+Selfless Spirit $Draft Number:7.65
+Soulfire Grand Master $Draft Number:7.82
+Stoneforge Mystic $Draft Number:5.06
+Thalia, Guardian of Thraben $Draft Number:8.71
+Wall of Omens $Draft Number:8.58
+Aven Mindcensor $Draft Number:9.32
+Blade Splicer $Draft Number:7.23
+Brimaz, King of Oreskos $Draft Number:4.79
+Eldrazi Displacer $Draft Number:6.5
+Fairgrounds Warden $Draft Number:5.71
+Flickerwisp $Draft Number:10.27
+Mentor of the Meek $Draft Number:7.85
+Mirror Entity $Draft Number:9.27
+Monastery Mentor $Draft Number:4.56
+Recruiter of the Guard $Draft Number:6.84
+Silverblade Paladin $Draft Number:9.46
+Thalia, Heretic Cathar $Draft Number:4.13
+Academy Rector $Draft Number:10.18
+Emeria Angel $Draft Number:10.27
+Hero of Bladehold $Draft Number:5.76
+Hokori, Dust Drinker $Draft Number:12.48
+Ranger of Eos $Draft Number:11.43
+Restoration Angel $Draft Number:5.46
+Wall of Reverence $Draft Number:5.08
+Angel of Invention $Draft Number:4.51
+Archangel Avacyn $Draft Number:2.94
+Archangel of Thune $Draft Number:7.05
+Baneslayer Angel $Draft Number:5.86
+Karmic Guide $Draft Number:9.23
+Reveillark $Draft Number:9.58
+Mikaeus, the Lunarch $Draft Number:4.83
+Sun Titan $Draft Number:5.86
+Angel of Serenity $Draft Number:9.21
+Elesh Norn, Grand Cenobite $Draft Number:4.41
+Eternal Dragon $Draft Number:9.83
+Avacyn, Angel of Hope $Draft Number:5.02
+Iona, Shield of Emeria $Draft Number:6.31
+Ajani, Caller of the Pride $Draft Number:7.83
+Elspeth, Knight-Errant $Draft Number:4.27
+Gideon, Ally of Zendikar $Draft Number:3.83
+Gideon Jura $Draft Number:5.97
+Elspeth, Sun's Champion $Draft Number:3.74
+Porcelain Legionnaire $Draft Number:9.57
+Condemn $Draft Number:7.49
+Enlightened Tutor $Draft Number:8.52
+Path to Exile $Draft Number:4.36
+Swords to Plowshares $Draft Number:4.33
+Disenchant $Draft Number:11.78
+Balance $Draft Number:5.98
+Council's Judgment $Draft Number:6.88
+Lingering Souls $Draft Number:6.93
+Spectral Procession $Draft Number:9.22
+Armageddon $Draft Number:7.78
+Cataclysm $Draft Number:10.62
+Day of Judgment $Draft Number:7.28
+Ravages of War $Draft Number:9.36
+Sram's Expertise $Draft Number:4.86
+Wrath of God $Draft Number:5.98
+Fumigate $Draft Number:4.48
+Rout $Draft Number:9.79
+Akroma's Vengeance $Draft Number:7.03
+Terminus $Draft Number:8.41
+Martial Coup $Draft Number:6.1
+Entreat the Angels $Draft Number:6.11
+Decree of Justice $Draft Number:9.88
+Land Tax $Draft Number:8.96
+Honor of the Pure $Draft Number:11.66
+Journey to Nowhere $Draft Number:7.4
+Luminarch Ascension $Draft Number:7.13
+Temporal Isolation $Draft Number:7.65
+Oblivion Ring $Draft Number:6.14
+Faith's Fetters $Draft Number:8.52
+Moat $Draft Number:8.72
+Worship $Draft Number:6.77
+Spear of Heliod $Draft Number:9.84
+Spirit of the Labyrinth $Draft Number:10.95
+Karakas $Draft Number:7.89
+Kjeldoran Outpost $Draft Number:9.05
+Windbrisk Heights $Draft Number:11.51
+Augur of Bolas $Draft Number:9.24
+Baral, Chief of Compliance $Draft Number:5.37
+Gilded Drake $Draft Number:7.69
+Jace, Vryn's Prodigy $Draft Number:2.85
+Looter il-Kor $Draft Number:6.97
+Merfolk Looter $Draft Number:5.62
+Phantasmal Image $Draft Number:6.11
+Snapcaster Mage $Draft Number:3.42
+Stratus Dancer $Draft Number:6.81
+Thing in the Ice $Draft Number:5.58
+Deceiver Exarch $Draft Number:6.01
+Grand Architect $Draft Number:8.96
+Kira, Great Glass-Spinner $Draft Number:5.11
+Man-o'-War $Draft Number:7.59
+Pestermite $Draft Number:6.11
+Trinket Mage $Draft Number:7.47
+Trophy Mage $Draft Number:4.0
+Vendilion Clique $Draft Number:4.35
+Glen Elendra Archmage $Draft Number:4.69
+Padeem, Consul of Innovation $Draft Number:7.17
+Sower of Temptation $Draft Number:4.82
+Talrand, Sky Summoner $Draft Number:6.5
+Tradewind Rider $Draft Number:5.17
+Venser, Shaper Savant $Draft Number:4.94
+Meloku the Clouded Mirror $Draft Number:9.7
+Mulldrifter $Draft Number:4.44
+Riftwing Cloudskate $Draft Number:8.29
+Aetherling $Draft Number:5.68
+Consecrated Sphinx $Draft Number:3.21
+Palinchron $Draft Number:7.63
+Jace Beleren $Draft Number:4.52
+Jace, Architect of Thought $Draft Number:5.61
+Jace, the Mind Sculptor $Draft Number:1.89
+Tamiyo, the Moon Sage $Draft Number:4.41
+Tezzeret the Seeker $Draft Number:6.05
+Master of Etherium $Draft Number:9.47
+Phyrexian Metamorph $Draft Number:4.4
+Torrential Gearhulk $Draft Number:3.65
+Inkwell Leviathan $Draft Number:5.55
+Ancestral Recall $Draft Number:1.66
+Brainstorm $Draft Number:4.67
+Mystical Tutor $Draft Number:5.41
+Brain Freeze $Draft Number:7.7
+Counterspell $Draft Number:4.24
+Cyclonic Rift $Draft Number:4.33
+Daze $Draft Number:7.56
+Essence Scatter $Draft Number:6.5
+Impulse $Draft Number:6.08
+Into the Roil $Draft Number:7.35
+Mana Drain $Draft Number:2.47
+Mana Leak $Draft Number:5.29
+Memory Lapse $Draft Number:8.05
+Miscalculation $Draft Number:5.6
+Negate $Draft Number:8.57
+Remand $Draft Number:5.09
+Capsize $Draft Number:4.37
+Disallow $Draft Number:4.86
+Forbid $Draft Number:5.93
+Forbidden Alchemy $Draft Number:9.2
+Frantic Search $Draft Number:5.9
+Intuition $Draft Number:7.54
+Psionic Blast $Draft Number:7.26
+Thirst for Knowledge $Draft Number:6.81
+Careful Consideration $Draft Number:8.34
+Cryptic Command $Draft Number:3.71
+Fact or Fiction $Draft Number:4.43
+Gifts Ungiven $Draft Number:6.43
+Turnabout $Draft Number:8.62
+Force of Will $Draft Number:3.52
+Gush $Draft Number:6.99
+Mystic Confluence $Draft Number:3.49
+Pact of Negation $Draft Number:5.67
+Repeal $Draft Number:8.57
+Dig Through Time $Draft Number:4.64
+Ancestral Vision $Draft Number:3.63
+Gitaxian Probe $Draft Number:6.41
+Ponder $Draft Number:4.73
+Preordain $Draft Number:4.63
+Serum Visions $Draft Number:5.08
+Time Walk $Draft Number:1.77
+Compulsive Research $Draft Number:5.76
+Show and Tell $Draft Number:4.04
+Timetwister $Draft Number:4.72
+Tinker $Draft Number:3.04
+Deep Analysis $Draft Number:6.0
+Bribery $Draft Number:3.49
+Time Warp $Draft Number:5.48
+Mind's Desire $Draft Number:8.13
+Time Spiral $Draft Number:5.91
+Upheaval $Draft Number:4.35
+Treasure Cruise $Draft Number:5.31
+Narcolepsy $Draft Number:6.59
+Control Magic $Draft Number:4.53
+Opposition $Draft Number:6.1
+Treachery $Draft Number:3.38
+Academy Ruins $Draft Number:9.02
+Shelldock Isle $Draft Number:7.6
+Tolarian Academy $Draft Number:3.62
+Bloodsoaked Champion $Draft Number:9.79
+Carnophage $Draft Number:11.28
+Carrion Feeder $Draft Number:10.51
+Cryptbreaker $Draft Number:2.57
+Diregraf Ghoul $Draft Number:11.91
+Gravecrawler $Draft Number:10.97
+Blood Scrivener $Draft Number:5.41
+Bloodghast $Draft Number:9.24
+Dark Confidant $Draft Number:6.43
+Heir of Falkenrath $Draft Number:9.77
+Nezumi Graverobber $Draft Number:11.37
+Nightscape Familiar $Draft Number:9.74
+Oona's Prowler $Draft Number:10.2
+Pack Rat $Draft Number:5.78
+Relentless Dead $Draft Number:4.33
+Zulaport Cutthroat $Draft Number:6.72
+Bone Shredder $Draft Number:9.55
+Cemetery Reaper $Draft Number:5.35
+Diregraf Colossus $Draft Number:4.5
+Flesh Carver $Draft Number:10.62
+Fleshbag Marauder $Draft Number:7.68
+Geralf's Messenger $Draft Number:11.14
+Liliana, Heretical Healer $Draft Number:5.95
+Lord of the Undead $Draft Number:5.92
+Bloodline Keeper $Draft Number:8.42
+Braids, Cabal Minion $Draft Number:10.54
+Disciple of Bolas $Draft Number:9.09
+Graveborn Muse $Draft Number:11.52
+Kalitas, Traitor of Ghet $Draft Number:3.79
+Nekrataal $Draft Number:8.48
+Phyrexian Obliterator $Draft Number:6.82
+Skinrender $Draft Number:9.21
+Bloodgift Demon $Draft Number:5.85
+Gray Merchant of Asphodel $Draft Number:7.17
+Shriekmaw $Draft Number:7.3
+Sidisi, Undead Vizier $Draft Number:8.85
+Grave Titan $Draft Number:3.9
+Kokusho, the Evening Star $Draft Number:5.9
+Mikaeus, the Unhallowed $Draft Number:6.58
+Tasigur, the Golden Fang $Draft Number:6.4
+Sheoldred, Whispering One $Draft Number:5.31
+Griselbrand $Draft Number:3.34
+Tombstalker $Draft Number:10.97
+Liliana of the Veil $Draft Number:3.11
+Liliana Vess $Draft Number:5.04
+Ob Nixilis Reignited $Draft Number:4.24
+Booster Tutor $Draft Number:5.74
+Dark Ritual $Draft Number:6.06
+Entomb $Draft Number:6.13
+Fatal Push $Draft Number:6.15
+Vampiric Tutor $Draft Number:3.9
+Doom Blade $Draft Number:4.48
+Go for the Throat $Draft Number:6.2
+Tainted Pact $Draft Number:8.84
+Ultimate Price $Draft Number:7.44
+Corpse Dance $Draft Number:9.77
+Dismember $Draft Number:5.77
+Hero's Downfall $Draft Number:5.98
+Slaughter Pact $Draft Number:8.19
+Makeshift Mannequin $Draft Number:9.93
+Murderous Cut $Draft Number:7.0
+Duress $Draft Number:8.29
+Innocent Blood $Draft Number:6.83
+Inquisition of Kozilek $Draft Number:6.71
+Reanimate $Draft Number:4.48
+Thoughtseize $Draft Number:4.89
+Chainer's Edict $Draft Number:4.77
+Demonic Tutor $Draft Number:3.16
+Exhume $Draft Number:5.48
+Hymn to Tourach $Draft Number:5.65
+Night's Whisper $Draft Number:6.06
+Sign in Blood $Draft Number:8.99
+Sinkhole $Draft Number:5.39
+Buried Alive $Draft Number:7.64
+Ruinous Path $Draft Number:6.18
+Yawgmoth's Will $Draft Number:5.83
+Damnation $Draft Number:4.98
+Dread Return $Draft Number:8.12
+Tendrils of Agony $Draft Number:8.07
+Yahenni's Expertise $Draft Number:3.44
+Living Death $Draft Number:7.71
+Unburial Rites $Draft Number:6.71
+Mind Shatter $Draft Number:7.5
+Sarcomancy $Draft Number:12.83
+Animate Dead $Draft Number:5.25
+Bitterblossom $Draft Number:4.6
+Attrition $Draft Number:10.91
+Necromancy $Draft Number:6.4
+Necropotence $Draft Number:8.7
+Phyrexian Arena $Draft Number:6.12
+Recurring Nightmare $Draft Number:4.97
+Diabolic Servitude $Draft Number:7.57
+Nether Void $Draft Number:10.16
+The Abyss $Draft Number:10.21
+Yawgmoth's Bargain $Draft Number:7.58
+Cabal Coffers $Draft Number:11.13
+Urborg, Tomb of Yawgmoth $Draft Number:7.72
+Volrath's Stronghold $Draft Number:10.62
+Falkenrath Gorger $Draft Number:12.17
+Firedrinker Satyr $Draft Number:12.12
+Frenzied Goblin $Draft Number:11.66
+Goblin Bushwhacker $Draft Number:9.72
+Goblin Guide $Draft Number:6.95
+Goblin Welder $Draft Number:10.66
+Greater Gargadon $Draft Number:11.55
+Grim Lavamancer $Draft Number:8.55
+Reckless Waif $Draft Number:8.86
+Spikeshot Elder $Draft Number:12.3
+Stromkirk Noble $Draft Number:10.64
+Vexing Devil $Draft Number:4.77
+Zurgo Bellstriker $Draft Number:9.63
+Abbot of Keral Keep $Draft Number:8.22
+Aether Chaser $Draft Number:11.63
+Ash Zealot $Draft Number:9.4
+Borderland Marauder $Draft Number:10.34
+Ember Hauler $Draft Number:11.99
+Gore-House Chainwalker $Draft Number:11.98
+Kargan Dragonlord $Draft Number:11.02
+Kari Zev, Skyship Raider $Draft Number:6.84
+Keldon Marauders $Draft Number:10.15
+Lightning Mauler $Draft Number:11.86
+Plated Geopede $Draft Number:8.65
+Stormblood Berserker $Draft Number:10.54
+Young Pyromancer $Draft Number:6.16
+Chandra's Phoenix $Draft Number:10.25
+Countryside Crusher $Draft Number:11.21
+Dualcaster Mage $Draft Number:10.19
+Feldon of the Third Path $Draft Number:8.26
+Goblin Rabblemaster $Draft Number:4.08
+Goblin Ruinblaster $Draft Number:12.42
+Hell's Thunder $Draft Number:11.41
+Imperial Recruiter $Draft Number:9.11
+Squee, Goblin Nabob $Draft Number:11.91
+Avalanche Riders $Draft Number:11.54
+Flametongue Kavu $Draft Number:7.65
+Hellrider $Draft Number:8.58
+Hero of Oxid Ridge $Draft Number:10.37
+Pia and Kiran Nalaar $Draft Number:6.27
+Goblin Dark-Dwellers $Draft Number:7.03
+Kiki-Jiki, Mirror Breaker $Draft Number:4.9
+Siege-Gang Commander $Draft Number:10.42
+Thundermaw Hellkite $Draft Number:7.84
+Zealous Conscripts $Draft Number:6.4
+Inferno Titan $Draft Number:6.74
+Bogardan Hellkite $Draft Number:10.18
+Chandra, Torch of Defiance $Draft Number:3.11
+Chandra, the Firebrand $Draft Number:7.67
+Daretti, Scrap Savant $Draft Number:8.92
+Koth of the Hammer $Draft Number:7.55
+Sarkhan, the Dragonspeaker $Draft Number:6.81
+Burst Lightning $Draft Number:9.43
+Lightning Bolt $Draft Number:4.38
+Ancient Grudge $Draft Number:11.78
+Incinerate $Draft Number:8.96
+Lightning Strike $Draft Number:7.98
+Magma Jet $Draft Number:8.44
+Searing Blaze $Draft Number:10.63
+Searing Spear $Draft Number:8.9
+Brimstone Volley $Draft Number:10.39
+Chaos Warp $Draft Number:9.76
+Char $Draft Number:10.08
+Staggershock $Draft Number:7.71
+Stoke the Flames $Draft Number:6.24
+Through the Breach $Draft Number:8.55
+Fireblast $Draft Number:10.99
+Chain Lightning $Draft Number:7.06
+Faithless Looting $Draft Number:9.51
+Firebolt $Draft Number:9.4
+Gamble $Draft Number:9.59
+Reckless Charge $Draft Number:11.01
+Arc Trail $Draft Number:8.28
+Pyroclasm $Draft Number:6.81
+Anger of the Gods $Draft Number:7.07
+Arc Lightning $Draft Number:7.08
+Flames of the Firebrand $Draft Number:7.85
+Kari Zev's Expertise $Draft Number:9.69
+Molten Rain $Draft Number:10.15
+Pillage $Draft Number:11.42
+Rift Bolt $Draft Number:9.3
+Slagstorm $Draft Number:11.8
+Wheel of Fortune $Draft Number:6.86
+Empty the Warrens $Draft Number:10.77
+Past in Flames $Draft Number:9.52
+Banefire $Draft Number:9.03
+Devil's Play $Draft Number:7.5
+Earthquake $Draft Number:11.39
+Rolling Earthquake $Draft Number:11.03
+Wildfire $Draft Number:11.05
+Bonfire of the Damned $Draft Number:7.84
+Sulfuric Vortex $Draft Number:8.86
+Sneak Attack $Draft Number:5.44
+Splinter Twin $Draft Number:4.56
+Eidolon of the Great Revel $Draft Number:9.26
+Purphoros, God of the Forge $Draft Number:6.12
+Ghitu Encampment $Draft Number:11.92
+Teetering Peaks $Draft Number:12.39
+Avacyn's Pilgrim $Draft Number:8.05
+Birds of Paradise $Draft Number:4.17
+Elves of Deep Shadow $Draft Number:9.65
+Elvish Mystic $Draft Number:6.02
+Experiment One $Draft Number:7.1
+Fyndhorn Elves $Draft Number:6.3
+Joraga Treespeaker $Draft Number:6.22
+Llanowar Elves $Draft Number:6.21
+Noble Hierarch $Draft Number:4.39
+Ulvenwald Tracker $Draft Number:10.47
+Devoted Druid $Draft Number:4.77
+Duskwatch Recruiter $Draft Number:5.1
+Fauna Shaman $Draft Number:8.47
+Lotus Cobra $Draft Number:5.19
+Mayor of Avabruck $Draft Number:6.2
+Overgrown Battlement $Draft Number:9.09
+Rofellos, Llanowar Emissary $Draft Number:4.27
+Sakura-Tribe Elder $Draft Number:6.75
+Scavenging Ooze $Draft Number:7.77
+Scorned Villager $Draft Number:4.17
+Strangleroot Geist $Draft Number:8.44
+Sylvan Caryatid $Draft Number:5.39
+Tarmogoyf $Draft Number:5.71
+Wall of Blossoms $Draft Number:8.95
+Wall of Roots $Draft Number:8.27
+Eternal Witness $Draft Number:6.46
+Nissa, Vastwood Seer $Draft Number:3.59
+Reclamation Sage $Draft Number:10.06
+Tireless Tracker $Draft Number:3.8
+Wood Elves $Draft Number:6.72
+Yavimaya Elder $Draft Number:8.48
+Blastoderm $Draft Number:7.68
+Chameleon Colossus $Draft Number:6.93
+Master of the Wild Hunt $Draft Number:7.68
+Mold Shambler $Draft Number:5.06
+Obstinate Baloth $Draft Number:9.13
+Oracle of Mul Daya $Draft Number:5.42
+Polukranos, World Eater $Draft Number:7.33
+Thelonite Hermit $Draft Number:10.51
+Thrun, the Last Troll $Draft Number:6.97
+Vengevine $Draft Number:9.48
+Wickerbough Elder $Draft Number:10.58
+Yeva, Nature's Herald $Draft Number:6.4
+Acidic Slime $Draft Number:9.34
+Conclave Naturalists $Draft Number:12.06
+Deranged Hermit $Draft Number:9.36
+Genesis $Draft Number:9.35
+Golgari Grave-Troll $Draft Number:7.08
+Thragtusk $Draft Number:5.53
+Vorapede $Draft Number:7.1
+Primeval Titan $Draft Number:3.54
+Avenger of Zendikar $Draft Number:6.53
+Primordial Hydra $Draft Number:6.06
+Craterhoof Behemoth $Draft Number:6.06
+Terastodon $Draft Number:6.71
+Woodfall Primus $Draft Number:6.69
+Garruk Relentless $Draft Number:7.96
+Garruk Wildspeaker $Draft Number:5.14
+Garruk, Primal Hunter $Draft Number:7.26
+Nissa, Worldwaker $Draft Number:6.24
+Arbor Elf $Draft Number:7.73
+Verdurous Gearhulk $Draft Number:4.5
+Birthing Pod $Draft Number:8.38
+Moment's Peace $Draft Number:10.84
+Naturalize $Draft Number:11.65
+Beast Within $Draft Number:10.14
+Harrow $Draft Number:6.04
+Chord of Calling $Draft Number:8.15
+Channel $Draft Number:4.15
+Explore $Draft Number:6.58
+Farseek $Draft Number:6.07
+Life from the Loam $Draft Number:10.48
+Rampant Growth $Draft Number:5.67
+Regrowth $Draft Number:9.96
+Cultivate $Draft Number:5.57
+Kodama's Reach $Draft Number:5.7
+Search for Tomorrow $Draft Number:8.59
+Harmonize $Draft Number:7.69
+Natural Order $Draft Number:5.72
+Overrun $Draft Number:10.25
+Primal Command $Draft Number:9.5
+Rude Awakening $Draft Number:10.38
+Green Sun's Zenith $Draft Number:6.55
+Tooth and Nail $Draft Number:6.25
+Genesis Wave $Draft Number:8.94
+Fastbond $Draft Number:4.44
+Rancor $Draft Number:8.29
+Oath of Druids $Draft Number:7.3
+Survival of the Fittest $Draft Number:6.45
+Sylvan Library $Draft Number:4.77
+Awakening Zone $Draft Number:7.89
+Heartbeat of Spring $Draft Number:8.88
+Song of the Dryads $Draft Number:10.01
+Defense of the Heart $Draft Number:6.79
+Courser of Kruphix $Draft Number:5.61
+Gaea's Cradle $Draft Number:4.56
+Treetop Village $Draft Number:11.2
+Yavimaya Hollow $Draft Number:6.24
+Geist of Saint Traft $Draft Number:5.57
+Reflector Mage $Draft Number:8.88
+Spell Queller $Draft Number:5.13
+Wall of Denial $Draft Number:4.16
+Venser, the Sojourner $Draft Number:7.43
+Azorius Signet $Draft Number:4.96
+Sphinx's Revelation $Draft Number:6.3
+Supreme Verdict $Draft Number:6.6
+Celestial Colonnade $Draft Number:6.3
+Flooded Strand $Draft Number:5.39
+Hallowed Fountain $Draft Number:6.82
+Tundra $Draft Number:5.78
+Shadowmage Infiltrator $Draft Number:9.8
+Grimgrin, Corpse-Born $Draft Number:9.82
+Dragonlord Silumgar $Draft Number:5.2
+Tezzeret, Agent of Bolas $Draft Number:7.06
+Baleful Strix $Draft Number:5.85
+Dimir Signet $Draft Number:4.29
+Agony Warp $Draft Number:10.56
+Far $Draft Number:7.75
+Creeping Tar Pit $Draft Number:6.32
+Polluted Delta $Draft Number:4.72
+Underground Sea $Draft Number:4.61
+Watery Grave $Draft Number:6.26
+Tymaret, the Murder King $Draft Number:8.43
+Falkenrath Aristocrat $Draft Number:10.76
+Murderous Redcap $Draft Number:6.78
+Daretti, Ingenious Iconoclast $Draft Number:4.39
+Rakdos Signet $Draft Number:5.9
+Kolaghan's Command $Draft Number:6.13
+Unlicensed Disintegration $Draft Number:10.06
+Dreadbore $Draft Number:9.12
+Badlands $Draft Number:7.03
+Blood Crypt $Draft Number:8.1
+Bloodstained Mire $Draft Number:6.17
+Lavaclaw Reaches $Draft Number:11.12
+Burning-Tree Emissary $Draft Number:9.67
+Bloodbraid Elf $Draft Number:8.12
+Ghor-Clan Rampager $Draft Number:11.39
+Huntmaster of the Fells $Draft Number:8.59
+Domri Rade $Draft Number:9.49
+Gruul Signet $Draft Number:6.98
+Manamorphose $Draft Number:6.87
+Raging Ravine $Draft Number:9.89
+Stomping Ground $Draft Number:9.52
+Taiga $Draft Number:8.23
+Wooded Foothills $Draft Number:6.95
+Dryad Militant $Draft Number:10.76
+Qasali Pridemage $Draft Number:11.32
+Voice of Resurgence $Draft Number:7.79
+Kitchen Finks $Draft Number:6.97
+Knight of the Reliquary $Draft Number:8.84
+Selesnya Signet $Draft Number:6.72
+Mirari's Wake $Draft Number:7.58
+Gavony Township $Draft Number:11.32
+Savannah $Draft Number:7.97
+Stirring Wildwood $Draft Number:8.85
+Temple Garden $Draft Number:9.17
+Windswept Heath $Draft Number:6.93
+Ayli, Eternal Pilgrim $Draft Number:8.33
+Ashen Rider $Draft Number:5.86
+Sorin, Lord of Innistrad $Draft Number:6.77
+Tidehollow Sculler $Draft Number:10.68
+Orzhov Signet $Draft Number:5.97
+Vindicate $Draft Number:7.25
+Debtors' Knell $Draft Number:8.29
+Godless Shrine $Draft Number:8.0
+Marsh Flats $Draft Number:6.32
+Scrubland $Draft Number:6.79
+Shambling Vent $Draft Number:8.59
+Vault of the Archangel $Draft Number:11.8
+Deathrite Shaman $Draft Number:5.83
+Lotleth Troll $Draft Number:11.02
+Glissa, the Traitor $Draft Number:7.84
+Golgari Signet $Draft Number:6.18
+Abrupt Decay $Draft Number:8.54
+Maelstrom Pulse $Draft Number:9.68
+Worm Harvest $Draft Number:10.02
+Pernicious Deed $Draft Number:10.49
+Bayou $Draft Number:7.0
+Hissing Quagmire $Draft Number:9.96
+Overgrown Tomb $Draft Number:8.37
+Verdant Catacombs $Draft Number:5.62
+Coiling Oracle $Draft Number:9.58
+Kiora's Follower $Draft Number:9.02
+Edric, Spymaster of Trest $Draft Number:9.4
+Trygon Predator $Draft Number:11.07
+Mystic Snake $Draft Number:10.25
+Simic Sky Swallower $Draft Number:6.72
+Kiora, the Crashing Wave $Draft Number:7.5
+Simic Signet $Draft Number:5.22
+Breeding Pool $Draft Number:7.28
+Lumbering Falls $Draft Number:10.55
+Misty Rainforest $Draft Number:5.31
+Tropical Island $Draft Number:5.57
+Goblin Electromancer $Draft Number:8.59
+Dack Fayden $Draft Number:3.97
+Ral Zarek $Draft Number:6.84
+Izzet Signet $Draft Number:4.63
+Fire $Draft Number:8.22
+Izzet Charm $Draft Number:8.34
+Electrolyze $Draft Number:8.26
+Prophetic Bolt $Draft Number:10.28
+Scalding Tarn $Draft Number:4.84
+Steam Vents $Draft Number:5.96
+Volcanic Island $Draft Number:5.16
+Wandering Fumarole $Draft Number:8.25
+Figure of Destiny $Draft Number:8.19
+Boros Reckoner $Draft Number:9.12
+Ajani Vengeant $Draft Number:6.56
+Boros Signet $Draft Number:6.99
+Boros Charm $Draft Number:11.22
+Lightning Helix $Draft Number:9.43
+Aurelia's Fury $Draft Number:8.25
+Chained to the Rocks $Draft Number:10.35
+Arid Mesa $Draft Number:6.56
+Needle Spires $Draft Number:11.42
+Plateau $Draft Number:8.26
+Sacred Foundry $Draft Number:9.5
+Sphinx of the Steel Wind $Draft Number:6.81
+Nicol Bolas, Planeswalker $Draft Number:7.42
+Thought-Knot Seer $Draft Number:4.02
+Kozilek, Butcher of Truth $Draft Number:4.78
+Ulamog, the Infinite Gyre $Draft Number:5.0
+Emrakul, the Aeons Torn $Draft Number:3.87
+Karn Liberated $Draft Number:2.49
+Ugin, the Spirit Dragon $Draft Number:2.62
+Signal Pest $Draft Number:10.66
+Arcbound Ravager $Draft Number:8.97
+Perilous Myr $Draft Number:7.72
+Phyrexian Revoker $Draft Number:8.71
+Scrapheap Scrounger $Draft Number:7.86
+Spellskite $Draft Number:5.58
+Etched Champion $Draft Number:6.75
+Filigree Familiar $Draft Number:4.22
+Metalworker $Draft Number:6.17
+Palladium Myr $Draft Number:5.51
+Lodestone Golem $Draft Number:8.01
+Molten-Tail Masticore $Draft Number:10.34
+Solemn Simulacrum $Draft Number:4.29
+Kuldotha Forgemaster $Draft Number:9.43
+Precursor Golem $Draft Number:7.79
+Soul of New Phyrexia $Draft Number:4.32
+Steel Hellkite $Draft Number:5.3
+Wurmcoil Engine $Draft Number:2.59
+Myr Battlesphere $Draft Number:4.85
+Sundering Titan $Draft Number:4.31
+Hangarback Walker $Draft Number:4.42
+Walking Ballista $Draft Number:4.3
+Blightsteel Colossus $Draft Number:3.63
+Black Lotus $Draft Number:1.37
+Chrome Mox $Draft Number:5.08
+Everflowing Chalice $Draft Number:5.66
+Lotus Bloom $Draft Number:5.0
+Lotus Petal $Draft Number:5.16
+Mana Crypt $Draft Number:2.31
+Mox Diamond $Draft Number:3.87
+Mox Emerald $Draft Number:1.94
+Mox Jet $Draft Number:1.75
+Mox Opal $Draft Number:5.62
+Mox Pearl $Draft Number:1.76
+Mox Ruby $Draft Number:1.82
+Mox Sapphire $Draft Number:1.65
+Aether Vial $Draft Number:4.97
+Bonesplitter $Draft Number:9.07
+Cursed Scroll $Draft Number:11.02
+Mana Vault $Draft Number:2.51
+Pithing Needle $Draft Number:9.76
+Relic of Progenitus $Draft Number:10.74
+Sensei's Divining Top $Draft Number:3.82
+Skullclamp $Draft Number:4.51
+Sol Ring $Draft Number:1.67
+Voltaic Key $Draft Number:4.13
+Ankh of Mishra $Draft Number:9.49
+Chaos Orb $Draft Number:5.0
+Coldsteel Heart $Draft Number:4.84
+Fellwar Stone $Draft Number:5.43
+Grim Monolith $Draft Number:3.15
+Isochron Scepter $Draft Number:7.06
+Lightning Greaves $Draft Number:7.9
+Mind Stone $Draft Number:4.61
+Prismatic Lens $Draft Number:6.42
+Scroll Rack $Draft Number:8.25
+Shrine of Burning Rage $Draft Number:11.32
+Smuggler's Copter $Draft Number:4.03
+Sphere of the Suns $Draft Number:6.35
+Time Vault $Draft Number:3.72
+Umezawa's Jitte $Draft Number:3.11
+Winter Orb $Draft Number:7.57
+Basalt Monolith $Draft Number:4.12
+Coalition Relic $Draft Number:3.81
+Crucible of Worlds $Draft Number:5.53
+Crystal Shard $Draft Number:9.34
+Cultivator's Caravan $Draft Number:4.15
+Mimic Vat $Draft Number:5.55
+Sword of Body and Mind $Draft Number:3.79
+Sword of Feast and Famine $Draft Number:3.93
+Sword of Fire and Ice $Draft Number:3.46
+Sword of Light and Shadow $Draft Number:4.5
+Sword of War and Peace $Draft Number:4.79
+Tangle Wire $Draft Number:9.37
+Vedalken Shackles $Draft Number:5.6
+Worn Powerstone $Draft Number:4.19
+Fleetwheel Cruiser $Draft Number:5.13
+Hedron Archive $Draft Number:4.96
+Nevinyrral's Disk $Draft Number:7.84
+Smokestack $Draft Number:10.21
+Thran Dynamo $Draft Number:3.49
+Batterskull $Draft Number:3.54
+Engineered Explosives $Draft Number:10.1
+Gilded Lotus $Draft Number:3.13
+Memory Jar $Draft Number:6.81
+Skysovereign, Consul Flagship $Draft Number:3.95
+Mindslaver $Draft Number:6.19
+All Is Dust $Draft Number:9.62
+Ancient Tomb $Draft Number:4.18
+Bazaar of Baghdad $Draft Number:9.03
+City of Brass $Draft Number:7.64
+City of Traitors $Draft Number:7.8
+Library of Alexandria $Draft Number:2.87
+Mana Confluence $Draft Number:6.56
+Maze of Ith $Draft Number:7.01
+Mishra's Factory $Draft Number:10.92
+Mishra's Workshop $Draft Number:5.87
+Mutavault $Draft Number:9.53
+Rishadan Port $Draft Number:10.14
+Strip Mine $Draft Number:4.77
+Tectonic Edge $Draft Number:11.38
+The Tabernacle at Pendrell Vale $Draft Number:6.03
+Wasteland $Draft Number:6.35

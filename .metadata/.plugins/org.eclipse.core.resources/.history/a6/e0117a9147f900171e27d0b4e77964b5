@@ -1,0 +1,13 @@
+
+<!--Footer-->
+<div class="navbar navbar-fixed-bottom">
+    <!-- Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2018 Copyright: <a href="https://github.com/Revature-1704-Java/MagicDraftApp"><strong> github.com</strong></a>
+        </div>
+    </div>
+    <!--/.Copyright -->
+    </div>
+<!--/.Footer-->
+                

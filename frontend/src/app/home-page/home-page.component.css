@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+    position: relative;
+    top: 20vh;
+}
+
+li {
+    margin: 10px;
+}
+
+#start-draft {
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    width:20%;
+    position: relative;
+    top: 10vh;
+}
+
+#user-deck {
+    font-size: 20px;
+}
+
+.text-center {
+    height: 100vh;
+    background-image: url("http://i.imgur.com/lP6b13v.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom:60px;
+}
