@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { User } from '../shared/user';
 
 @Injectable()
@@ -10,8 +11,8 @@ export class LoginService {
   private currentEmail : string;
   private currentPwd : string;
 
-  constructor(private http : HttpClient) {
-    this.loggedInUser = {email: ''};
+  constructor(public http : HttpClient, public router : Router) {
+    this.loggedInUser = {email: '', decks : []};
     this.loggedIn = false;
   }
 
@@ -24,8 +25,9 @@ export class LoginService {
     this.http.post<User>('http://18.218.13.19:8090/login', myForm).subscribe(res => {
       if(res !== null) {
         this.loggedIn = true;
-        console.log(res.email);
+        console.log(res);
         this.loggedInUser.email = res.email;
+        this.loggedInUser.decks = res.decks;
         return true;
       }
     });
@@ -58,6 +60,20 @@ export class LoginService {
 
   public getMyEmail(): string {
     return this.loggedInUser.email;
+  }
+
+  public viewPastDeck(deckId : number) {
+    console.log(this.loggedInUser.decks[deckId]);
+    let deckArray = JSON.stringify([]);
+    let temp = JSON.parse(deckArray)
+    for(let i = 0; i < this.loggedInUser.decks[deckId].cards.length; i++) {
+      console.log(this.loggedInUser.decks[deckId].cards[i].name);
+    }
+    deckArray = JSON.stringify(temp);
+
+
+    sessionStorage.deck = JSON.stringify(deckArray);
+    this.router.navigateByUrl('/summary')
   }
 
 }
