@@ -3,6 +3,7 @@ import {DeckService} from '../shared/deck.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../shared/login.service';
+import { Deck } from '../shared/deck';
 declare let jquery:any;
 declare let $ :any;
 
@@ -71,8 +72,9 @@ export class DraftInterfaceComponent implements OnInit {
 
   sendSaveDeck(){
     if(this.loggedInUser.loggedIn) {
-      this.http.post("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      this.http.post<Deck>("http://18.218.13.19:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
         console.log(res);
+        this.loggedInUser.loggedInUser.decks.push(res);
       });
     }
 

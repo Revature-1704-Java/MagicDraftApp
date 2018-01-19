@@ -16,14 +16,16 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
   }
 
-  public pastDeck(deck : any) {
-    console.log(deck);
-    for(let i = 0; i < this.login.loggedInUser.decks.length; i++) {
+  public getDeckId(deck : any) {
+    for (let i = 0; i < this.login.loggedInUser.decks.length; i++) {
       if(deck == this.login.loggedInUser.decks[i]) {
-        this.login.viewPastDeck(this.login.loggedInUser.decks.indexOf(deck));
+        return i;
       }
     }
+  }
 
+  public pastDeck(deck : any) {
+      this.login.viewPastDeck(this.getDeckId(deck));
   }
 
 }

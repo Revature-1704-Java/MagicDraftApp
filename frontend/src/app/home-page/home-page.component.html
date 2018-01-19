@@ -5,7 +5,7 @@
 	<div class='pastDecks' *ngIf='this.login.loggedIn'>
 		<ul>
 			<li *ngFor='let deck of this.login.loggedInUser.decks'>
-				<a (click)='this.pastDeck(deck)' href='javascript:void(0)'>THIS IS A DECK, SOMEONE MAKE THIS LOOK GOOD PLS</a>
+				<a (click)='this.pastDeck(deck)' href='javascript:void(0)'>Deck {{getDeckId(deck) + 1}}</a>
 			</li>
 		</ul>
 	</div>
