@@ -42,10 +42,10 @@
 		<div *ngIf='this.login.loggedIn' class='navbar-collapse collapse dual-collapse'>
 			<ul class='navbar-nav ml-auto'>
 				<li id="loggedInMessage" class='nav-item'>
-					<span>Welcome: {{this.login.getMyEmail()}}</span>
+					<span>Hi {{this.login.getMyEmail()}}</span>
 				</li>
 				<li class='nav-item'>
-					<button type='button' class='btn btn-warn' (click)='doLogout()'>Log Out</button>
+					<button type='button' class='btn btn-success btn-md' (click)='doLogout()'>Log Out</button>
 				</li>
 			</ul>
 		</div>
