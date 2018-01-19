@@ -3,6 +3,8 @@ div {
     background-image: url("http://i.imgur.com/lP6b13v.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom:60px;
+
 }
 
 #startDraft {
@@ -10,4 +12,8 @@ div {
     font-size: 20px;
     border-radius: 10px;
     width:20%;
+}
+
+li {
+    margin: 10px;
 }
