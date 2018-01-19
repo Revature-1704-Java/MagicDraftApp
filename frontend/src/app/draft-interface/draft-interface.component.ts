@@ -71,7 +71,7 @@ export class DraftInterfaceComponent implements OnInit {
 
   sendSaveDeck(){
     if(this.loggedInUser.loggedIn) {
-      this.http.post<Deck>("http://18.218.26.17:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
+      this.http.post<Deck>("http://18.217.166.137:8090/save/deck", {"deck": JSON.parse(sessionStorage.deck), "email": this.loggedInUser.loggedInUser.email}).subscribe(res => {
         console.log(res);
         this.loggedInUser.loggedInUser.decks.push(res);
       });
@@ -85,7 +85,7 @@ export class DraftInterfaceComponent implements OnInit {
     sessionStorage.draft_total = 0.0;
     let deck_array = [];
     sessionStorage.deck = JSON.stringify(deck_array);
-    xhttp.open("POST", "http://18.218.26.17:8090/generate/pack/players/2", true);
+    xhttp.open("POST", "http://18.217.166.137:8090/generate/pack/players/2", true);
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState == 4 && xhttp.status == 200) {
         let json = xhttp.responseText;
@@ -185,7 +185,7 @@ function grabImage(cardName: string, id: number, dv: number) {
 
 function sendSaveDeck() {
   let xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "http://18.218.26.17:8090/save/deck", true);
+  xhttp.open("POST", "http://18.217.166.137:8090/save/deck", true);
   xhttp.onreadystatechange = function () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       /*TODO*/
