@@ -25,7 +25,7 @@
 				</li>
 			</ul>
 		</div>
-		<a class="navbar-brand d-flex mx-auto" id="title" href="#">
+		<a class="navbar-brand d-flex mx-auto" id="title" (click)="home()" href='javascript:void(0)'>
 			Magic The Gathering Draft
 		</a>
 		<div *ngIf='!this.login.loggedIn' class="navbar-collapse collapse dual-collapse">

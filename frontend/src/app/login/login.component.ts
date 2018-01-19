@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../shared/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   public currentEmail: string;
   public currentPwd: string;
 
-  constructor(public login: LoginService) { }
+  constructor(public login: LoginService, public router: Router) { }
 
   ngOnInit() {
   }
@@ -28,5 +29,9 @@ export class LoginComponent implements OnInit {
 
   public doLogout() {
     this.login.processLogout();
+  }
+
+  public home() {
+     this.router.navigateByUrl('')
   }
 }
