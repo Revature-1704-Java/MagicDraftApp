@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../shared/login.service';
-declare let jquery:any;
-declare let $ :any;
+declare let jquery: any;
+declare let $: any;
 
 @Component({
   selector: 'app-home-page',
@@ -10,8 +10,7 @@ declare let $ :any;
 })
 
 export class HomePageComponent implements OnInit {
-
-  constructor(public login : LoginService) {}
+  constructor(public login: LoginService) { }
 
   ngOnInit() {
   }
@@ -27,5 +26,4 @@ export class HomePageComponent implements OnInit {
   public pastDeck(deck : any) {
       this.login.viewPastDeck(this.getDeckId(deck));
   }
-
 }

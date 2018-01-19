@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { CardResponseTemplate } from '../shared/card-response-template';
@@ -8,11 +8,10 @@ import { CardResponseTemplate } from '../shared/card-response-template';
   templateUrl: './draft-summary.component.html',
   styleUrls: ['./draft-summary.component.css']
 })
+
 export class DraftSummaryComponent implements OnInit {
-
-  public deckImages : string[];
-
-  constructor(public router : Router, public http : HttpClient) {}
+  public deckImages: string[];
+  constructor(public router: Router, public http: HttpClient) { }
 
   ngOnInit() {
     this.deckImages = [''];
@@ -25,12 +24,12 @@ export class DraftSummaryComponent implements OnInit {
 
   public getImagesAgain() {
     let deck = JSON.parse(sessionStorage.deck);
-    for(let i = 0; i < deck.length; i++) {
+    for (let i = 0; i < deck.length; i++) {
       console.log(deck[i]);
       this.http.get<CardResponseTemplate>('https://api.magicthegathering.io/v1/cards?name=' + deck[i]).subscribe(res => {
         let options = res.cards;
-        for(let x = 0; x < options.length; x++){
-          if(deck[i] === options[x].name && options[x].hasOwnProperty('imageUrl')) {
+        for (let x = 0; x < options.length; x++) {
+          if (deck[i] === options[x].name && options[x].hasOwnProperty('imageUrl')) {
             this.deckImages.push(options[x].imageUrl);
             break;
           }
@@ -38,7 +37,5 @@ export class DraftSummaryComponent implements OnInit {
       });
     }
     console.log(this.deckImages);
-
   }
-
 }
