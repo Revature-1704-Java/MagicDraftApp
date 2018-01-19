@@ -21,7 +21,7 @@ export class LoginService {
     myForm.append('email', email);
     myForm.append('password', password);
 
-    this.http.post<User>('http://18.218.13.19:8090/login', myForm).subscribe(res => {
+    this.http.post<User>('http://18.218.26.17:8090/login', myForm).subscribe(res => {
       if (res !== null) {
         this.loggedIn = true;
         this.loggedInUser.email = res.email;
@@ -37,7 +37,7 @@ export class LoginService {
     myForm.append('email', email);
     myForm.append('password', password);
 
-    this.http.post<User>('http://18.218.13.19:8090/signup', myForm).subscribe(res => {
+    this.http.post<User>('http://18.218.26.17:8090/signup', myForm).subscribe(res => {
       if (res !== null) {
         this.loggedIn = true;
         this.loggedInUser.email = res.email;
@@ -48,7 +48,7 @@ export class LoginService {
   }
 
   public processLogout() {
-    this.http.post('http://18.218.13.19:8090/logout', this.loggedInUser).subscribe();
+    this.http.post('http://18.218.26.17:8090/logout', this.loggedInUser).subscribe();
     this.loggedIn = false;
     this.currentEmail = null;
     this.currentPwd = null;
