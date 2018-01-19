@@ -507,7 +507,7 @@ Tezzeret, Agent of Bolas $Draft Number:7.06
 Baleful Strix $Draft Number:5.85
 Dimir Signet $Draft Number:4.29
 Agony Warp $Draft Number:10.56
-Far // Away $Draft Number:7.75
+Far $Draft Number:7.75
 Creeping Tar Pit $Draft Number:6.32
 Polluted Delta $Draft Number:4.72
 Underground Sea $Draft Number:4.61
@@ -587,7 +587,7 @@ Goblin Electromancer $Draft Number:8.59
 Dack Fayden $Draft Number:3.97
 Ral Zarek $Draft Number:6.84
 Izzet Signet $Draft Number:4.63
-Fire // Ice $Draft Number:8.22
+Fire $Draft Number:8.22
 Izzet Charm $Draft Number:8.34
 Electrolyze $Draft Number:8.26
 Prophetic Bolt $Draft Number:10.28
