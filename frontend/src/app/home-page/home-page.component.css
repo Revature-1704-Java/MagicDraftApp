@@ -1,22 +1,30 @@
-div {
+li {
+    margin: 10px;
+}
+
+ul {
+  list-style-type: none;
+  position: relative;
+  top: 20vh;
+}
+
+.text-center {
     height: 100vh;
     background-image: url("http://i.imgur.com/lP6b13v.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom:60px;
-
 }
 
-#startDraft {
+#start-draft {
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 10px;
     width:20%;
+    position: relative;
+    top: 10vh;
 }
 
-li {
-    margin: 10px;
-}
-ul {
-  list-style-type: none;
+#user-deck {
+    font-size: 20px;
 }
