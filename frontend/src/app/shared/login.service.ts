@@ -37,11 +37,18 @@ export class LoginService {
     myForm.append('email', email);
     myForm.append('password', password);
 
-    this.http.post('http://18.218.13.19:8090/signup', myForm);
+    this.http.post<User>('http://18.218.13.19:8090/signup', myForm).subscribe(res => {
+      if (res !== null) {
+        this.loggedIn = true;
+        this.loggedInUser.email = res.email;
+        this.loggedInUser.decks = res.decks;
+        return true;
+      }
+    });;
   }
 
   public processLogout() {
-    this.http.post('http://18.218.13.19:8090/logout', this.loggedInUser);
+    this.http.post('http://18.218.13.19:8090/logout', this.loggedInUser).subscribe();
     this.loggedIn = false;
     this.currentEmail = null;
     this.currentPwd = null;
